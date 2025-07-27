@@ -340,7 +340,7 @@ footer {
     }
 
     .site-footer.f-mob {
-        display: block !important;
+        display: none !important;
     }
 
     .search-bar-nav {
