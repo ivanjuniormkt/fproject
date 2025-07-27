@@ -251,9 +251,13 @@ footer {
 .anime-details-header {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 20px;
     padding: 15px 25px;
     background-color: #051720;
+}
+
+.container-footer-main {
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -506,6 +510,7 @@ svg {
     padding: 5px 7px 7px 5px;
     border-bottom: 6px solid #08202c;
     margin-bottom: 15px;
+    margin-top: 0;
 }
 
 .anime-extra-details {
@@ -1066,6 +1071,11 @@ section.anime-details-header {
     color: #ffffff;
     transition: background-color 0.3s ease;
 }
+
+.letter-filter button:hover {
+    background-color: #08202c;
+}
+
 
 .letter-filter button.active {
     background-color: #444;
