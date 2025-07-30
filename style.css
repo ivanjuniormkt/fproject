@@ -225,14 +225,14 @@ footer {
     font-size: 0.9em;
     width: 200px;
     transition: width 0.3s ease;
-    border-radius: none !important;
+    border-radius: 0 !important;
 }
 
 .search-bar-nav input#search-nav:focus {
     width: 250px;
     outline: none;
     border-color: #214556;
-    border-radius: none !important;
+    border-radius: 0 !important;
 }
 
 .search-bar-nav button#search-button-nav {
@@ -244,7 +244,21 @@ footer {
     transition: background-color 0.3s ease;
     display: flex;
     height: 44px;
-    border-radius: none !important;
+    border-radius: 0 !important;
+}
+
+.search-bar-nav input#search-nav,
+.search-bar-nav button#search-button-nav {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0 !important;
+}
+
+.search-bar-nav input#search-nav,
+.search-bar-nav button#search-button-nav {
+    box-sizing: border-box;
+    height: 44px;
+    line-height: normal;
 }
 
 .search-bar-nav button#search-button-nav:hover {
