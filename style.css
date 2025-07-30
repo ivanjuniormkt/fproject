@@ -261,8 +261,36 @@ footer {
     line-height: normal;
 }
 
+.search-bar-nav input#search-nav {
+    font-size: 16px;
+}
+
+.search-bar-nav svg {
+    width: 40px; /* ou o tamanho que quiser */
+    height: 40px;
+}
+
 .search-bar-nav button#search-button-nav:hover {
     background-color: rgb(14, 56, 77);
+}
+
+.search-bar-nav svg {
+    width: 32px;
+    height: 32px;
+}
+
+button#hamburger-btn {
+    width: 55px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button#search-button-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .anime-details-header {
