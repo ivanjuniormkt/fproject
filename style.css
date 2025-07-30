@@ -232,6 +232,7 @@ footer {
     width: 250px;
     outline: none;
     border-color: #214556;
+    border-radius: none !important;
 }
 
 .search-bar-nav button#search-button-nav {
@@ -243,6 +244,7 @@ footer {
     transition: background-color 0.3s ease;
     display: flex;
     height: 44px;
+    border-radius: none !important;
 }
 
 .search-bar-nav button#search-button-nav:hover {
