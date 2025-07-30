@@ -264,10 +264,12 @@ footer {
     .anime-details-header {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .anime-image-container {
         text-align: center;
+        max-width: 280px;
     }
 
     img#anime-imagem {
@@ -352,8 +354,8 @@ footer {
     }
 
     .anime-info-text {
-    margin-top: 30px;
-}
+        margin-top: 30px;
+    }
 }
 
 tbody {
