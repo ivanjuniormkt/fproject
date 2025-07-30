@@ -493,6 +493,7 @@ img#screenshot-image {
 .media-item {
     width: 100%;
     border: 5px solid #214556;
+    box-sizing: border-box;
 }
 
 .media-icon {
