@@ -10,7 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (projetosEmAndamento.length > 0) {
             let projectsHTML = '';
             projetosEmAndamento.forEach(anime => {
-                const episodiosAtuais = anime.episodios ? anime.episodios.length : 0;
+                const episodiosValidos = anime.episodios
+                    ? anime.episodios.filter(ep => /^\d+$/.test(ep.numero))
+                    : [];
+                const episodiosAtuais = episodiosValidos.length;
                 const progressoPorcentagem = (anime.episodiosTotal > 0)
                     ? (episodiosAtuais / anime.episodiosTotal) * 100
                     : 0;

@@ -24,15 +24,33 @@
             <div class="container-infs">
                 <div class="container-footer-main">
                     <main class="post-detail-container">
-                        <h1 id="post-detail-title"></h1>
-                        <p class="post-meta">
-                            <span id="post-detail-author"></span><span id="post-detail-date"></span>
-                        </p>
+                        <h1 id="post-page-title" style="display: none;"></h1>
+                        <h1 id="post-detail-title" style="margin: 0; text-align: left;"></h1>
+                        <div class="inf-pmet">
+                            <p class="post-meta" style="gap: 3px; align-items: center; margin-top: 0 !important;">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#a3a3a3" style="width: 18px;">
+                                    <path
+                                        d="M480-492.31q-57.75 0-98.87-41.12Q340-574.56 340-632.31q0-57.75 41.13-98.87 41.12-41.13 98.87-41.13 57.75 0 98.87 41.13Q620-690.06 620-632.31q0 57.75-41.13 98.88-41.12 41.12-98.87 41.12ZM180-187.69v-88.93q0-29.38 15.96-54.42 15.96-25.04 42.66-38.5 59.3-29.07 119.65-43.61 60.35-14.54 121.73-14.54t121.73 14.54q60.35 14.54 119.65 43.61 26.7 13.46 42.66 38.5Q780-306 780-276.62v88.93H180Zm60-60h480v-28.93q0-12.15-7.04-22.5-7.04-10.34-19.11-16.88-51.7-25.46-105.42-38.58Q534.7-367.69 480-367.69q-54.7 0-108.43 13.11-53.72 13.12-105.42 38.58-12.07 6.54-19.11 16.88-7.04 10.35-7.04 22.5v28.93Zm240-304.62q33 0 56.5-23.5t23.5-56.5q0-33-23.5-56.5t-56.5-23.5q-33 0-56.5 23.5t-23.5 56.5q0 33 23.5 56.5t56.5 23.5Zm0-80Zm0 384.62Z">
+                                    </path>
+                                </svg>
+                                <span id="post-detail-author"></span>
+                            </p>
+                            <p class="post-meta" style="gap: 3px; align-items: center; margin-top: 0 !important;">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#a3a3a3" style="width: 18px;">
+                                    <path
+                                        d="M200-607.69h560v-100q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H212.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v100Zm0 0V-720v112.31ZM212.31-100Q182-100 161-121q-21-21-21-51.31v-535.38Q140-738 161-759q21-21 51.31-21h55.38v-84.61h61.54V-780h303.08v-84.61h60V-780h55.38Q778-780 799-759q21 21 21 51.31v218.54q-14.39-6.31-29.39-10.2-15-3.88-30.61-6.11v-42.23H200v375.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85h260.08q5.07 16.61 12.27 31.42Q491.85-113.77 501-100H212.31Zm515.38 40q-74.92 0-127.46-52.54-52.54-52.54-52.54-127.46 0-74.92 52.54-127.46Q652.77-420 727.69-420q74.93 0 127.46 52.54 52.54 52.54 52.54 127.46 0 74.92-52.54 127.46Q802.62-60 727.69-60Zm66.62-88.46 24.92-24.92-73.84-73.85v-110.46H710v124.92l84.31 84.31Z">
+                                    </path>
+                                </svg>
+                                <span id="post-detail-date"></span>
+                            </p>
+                        </div>
                         <img id="post-detail-image" src="" alt="Imagem do Post" class="post-main-image">
 
                         <div id="post-detail-content">
                         </div>
-                    </main>
+                        <div id="related-project-card"></div>
                     </main>
                     <div id="footer"></div>
                 </div>
@@ -45,6 +63,7 @@
     <script src="js/loading.js"></script>
     <script src="data.js"></script>
     <script src="postDate1.js"></script>
+    <script src="js/rlPost.js"></script>
     <script src="js/paginationPost.js"></script>
     <script src="js/postdetailLogic.js"></script>
     <script src="js/footer.js"></script>

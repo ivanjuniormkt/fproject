@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Painel de Preenchimento</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background: #051720;
+            color: #fff
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #08202c;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #365e73;
+            background-color: #214556;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 80px;
+        }
+
+        tr {
+            border-color: #233a45;
+        }
+
+        button {
+            display: inline-block;
+            background: #1997d3;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            align-self: flex-start;
+            transition: background 0.2s;
+            font-size: 14px;
+            border: none;
+            margin-top: 50px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+
+        button:hover {
+            background: #1687bb;
+        }
+
+        pre {
+            background: #232323;
+            padding: 15px;
+            white-space: pre-wrap;
+            color: #1997d3;
+        }
+
+        div {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .option {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            box-sizing: border-box;
+            padding: 10px 0px 20px 0px;
+            border-bottom: 1px solid #21455682;
+        }
+
+        select {
+            background-color: #214556;
+        }
+
+        div#servidoresNomes {
+            align-items: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Painel de Preenchimento de Dados</h2>
+
+        <div class="option">
+            <div>
+                <label>ID:</label>
+                <input type="number" id="id" value="0">
+            </div>
+            <div>
+                <label>Título:</label>
+                <input type="text" id="titulo" value="">
+            </div>
+        </div>
+
+        <div class="option">
+            <div>
+                <label>Gênero:</label>
+                <input type="text" id="genero" value="">
+            </div>
+            <div>
+                <label>Lançamento:</label>
+                <input type="text" id="lancamento" value="">
+            </div>
+        </div>
+
+        <div class="option">
+            <div>
+                <label>Episódios Total:</label>
+                <input type="number" id="episodiosTotal" value="0">
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 10px;">
+                <div>
+                    <label>Resolução:</label>
+                    <select id="resolucao">
+                        <option value="1080p" selected>1080p</option>
+                        <option value="720p">720p</option>
+                        <option value="480p">480p</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Status:</label>
+                    <select id="status">
+                        <option value="Finalizado" selected>Finalizado</option>
+                        <option value="Em andamento">Em andamento</option>
+                        <option value="Pausado">Pausado</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Legendas:</label>
+                    <select id="legendas">
+                        <option value="Softsub" selected>Softsub</option>
+                        <option value="HardSub">HardSub</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="option">
+            <div>
+                <label>Adicionado em:</label>
+                <input type="text" id="adicionadoEm" value="3 de maio de 2020">
+            </div>
+            <div>
+                <label>Estúdio:</label>
+                <input type="text" id="estudio" value="">
+            </div>
+        </div>
+
+        <div class="option">
+            <div>
+                <label>Site Oficial:</label>
+                <input type="text" id="siteOficial" value="">
+            </div>
+            <div>
+                <label>Trailer URL:</label>
+                <input type="text" id="trailerUrl" value="">
+            </div>
+        </div>
+
+        <div class="option">
+            <div>
+                <label>Áudio:</label>
+                <input type="text" id="audio" value="AAC">
+            </div>
+            <div>
+                <label>Vídeo:</label>
+                <input type="text" id="video" value="x264 10Bit">
+            </div>
+        </div>
+
+        <div class="option">
+            <div>
+                <label>Script Original:</label>
+                <input type="text" id="scriptOriginal" value="">
+            </div>
+        </div>
+
+        <div class="option">
+            <div>
+                <label>Sinopse:</label>
+                <textarea id="sinopse"></textarea>
+            </div>
+        </div>
+
+        <!-- Parte nova abaixo da sinopse -->
+        <div class="option">
+            <div>
+                <label>Quantidade de Servidores:</label>
+                <select id="qtdServidores" onchange="atualizarNomesServidores()">
+                    <option value="1">1 Servidor</option>
+                    <option value="2">2 Servidores</option>
+                    <option value="3">3 Servidores</option>
+                </select>
+            </div>
+            <div id="servidoresNomes" style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;"></div>
+        </div>
+
+        <label style="margin-top: 30px; margin-bottom: 10px;">Episódios:</label>
+        <div id="tabelaEpisodios" style="overflow-x: auto;"></div>
+
+
+
+
+        <button onclick="gerarCodigo()">Gerar Código</button>
+        <button onclick="copiarCodigo()">Copiar código</button>
+        <button onclick="salvarComoArquivo()">Salvar arquivo .txt</button>
+        <button onclick="exportarRascunho()">Salvar Rascunho</button>
+        <input type="file" id="inputRascunho" accept=".json" style="display:none" onchange="importarRascunho(event)">
+        <button onclick="document.getElementById('inputRascunho').click()">Carregar Rascunho</button>
+
+        <h3>Código Gerado:</h3>
+        <pre id="output"></pre>
+    </div>
+
+    <script>
+        // Atualiza inputs para nomes dos servidores
+        function atualizarNomesServidores() {
+            const qtd = parseInt(document.getElementById('qtdServidores').value);
+            const container = document.getElementById('servidoresNomes');
+            container.innerHTML = '';
+
+            const servidoresPredefinidos = [
+                "pixeldrain", "terabox", "pcloud", "krakenfiles", "mediafire", "nyaa"
+            ];
+
+            for (let i = 1; i <= qtd; i++) {
+                const select = document.createElement('select');
+                select.id = `servidorNome${i}`;
+                select.innerHTML = servidoresPredefinidos.map(nome => `<option value="${nome}">${nome}</option>`).join('');
+                select.style.flex = "1";
+
+                // Atualiza a tabela ao trocar nome de servidor
+                select.addEventListener('change', gerarTabelaEpisodios);
+
+                container.appendChild(select);
+            }
+
+            gerarTabelaEpisodios(); // atualiza a tabela com os novos nomes
+        }
+
+        // Cria a tabela de episódios com campos para links
+        function gerarTabelaEpisodios() {
+            const total = parseInt(document.getElementById('episodiosTotal').value);
+            const qtdServ = parseInt(document.getElementById('qtdServidores').value || 1);
+
+            const nomesServidores = [];
+            for (let i = 1; i <= qtdServ; i++) {
+                const nome = document.getElementById(`servidorNome${i}`)?.value || `servidor${i}`;
+                nomesServidores.push(nome);
+            }
+
+            let html = `<table border="1" style="width:100%; border-collapse: collapse; text-align: left;">
+        <tr style="background-color:#214556;">
+            <th style="padding: 5px;">Episódio</th>`;
+            nomesServidores.forEach(nome => {
+                html += `<th style="padding: 5px;">${nome}</th>`;
+            });
+            html += `</tr>`;
+
+            for (let i = 1; i <= total; i++) {
+                html += `<tr><td style="padding: 5px;">${i}</td>`;
+                for (let s = 1; s <= qtdServ; s++) {
+                    html += `<td style="padding: 5px;"><input type="text" id="ep${i}_serv${s}" placeholder="URL Episódio ${i}"></td>`;
+                }
+                html += `</tr>`;
+            }
+            html += `</table>`;
+
+            document.getElementById('tabelaEpisodios').innerHTML = html;
+        }
+
+        // Geração automática sempre que mudar número total de episódios
+        document.getElementById('episodiosTotal').addEventListener('input', gerarTabelaEpisodios);
+
+        // Executa ao carregar a página
+        window.addEventListener('DOMContentLoaded', () => {
+            atualizarNomesServidores();
+        });
+
+        function copiarCodigo() {
+            const output = document.getElementById("output");
+            navigator.clipboard.writeText(output.textContent)
+                .then(() => alert("Código copiado!"))
+                .catch(err => alert("Erro ao copiar: " + err));
+        }
+
+        function salvarComoArquivo() {
+            const conteudo = document.getElementById("output").textContent;
+            const titulo = document.getElementById("titulo").value.trim() || "codigo-gerado";
+
+            // Remove caracteres inválidos para nomes de arquivos
+            const nomeArquivo = titulo.replace(/[<>:"/\\|?*]/g, '').replace(/\s+/g, '_') + ".txt";
+
+            const blob = new Blob([conteudo], { type: "text/plain;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = nomeArquivo;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            URL.revokeObjectURL(url);
+        }
+
+        function exportarRascunho() {
+            const campos = [
+                "id", "titulo", "genero", "lancamento", "episodiosTotal", "resolucao",
+                "status", "legendas", "adicionadoEm", "estudio", "siteOficial",
+                "trailerUrl", "audio", "video", "scriptOriginal", "sinopse", "qtdServidores"
+            ];
+
+            const dados = {};
+            campos.forEach(id => {
+                dados[id] = document.getElementById(id).value;
+            });
+
+            // Servidores
+            const qtdServ = parseInt(dados.qtdServidores);
+            dados.servidores = [];
+            for (let i = 1; i <= qtdServ; i++) {
+                const campo = document.getElementById(`servidorNome${i}`);
+                dados.servidores.push(campo ? campo.value : "");
+            }
+
+            // Links episódios
+            dados.links = {};
+            const total = parseInt(dados.episodiosTotal);
+            for (let i = 1; i <= total; i++) {
+                for (let s = 1; s <= qtdServ; s++) {
+                    const idCampo = `ep${i}_serv${s}`;
+                    const valor = document.getElementById(idCampo)?.value;
+                    if (valor) {
+                        dados.links[idCampo] = valor;
+                    }
+                }
+            }
+
+            // Nome do arquivo com título
+            const titulo = dados.titulo.trim() || "anime";
+            const nomeArquivo = `${titulo.replace(/[<>:"/\\|?*]/g, "").replace(/\s+/g, "_")}_backup.json`;
+
+            const blob = new Blob([JSON.stringify(dados, null, 2)], { type: "application/json" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = nomeArquivo;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+        }
+
+        function importarRascunho(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                try {
+                    const dados = JSON.parse(e.target.result);
+
+                    const campos = Object.keys(dados).filter(k => k !== "servidores" && k !== "links");
+                    campos.forEach(id => {
+                        if (document.getElementById(id)) {
+                            document.getElementById(id).value = dados[id];
+                        }
+                    });
+
+                    document.getElementById("qtdServidores").value = dados["qtdServidores"];
+                    atualizarNomesServidores();
+
+                    dados.servidores?.forEach((nome, i) => {
+                        const campo = document.getElementById(`servidorNome${i + 1}`);
+                        if (campo) campo.value = nome;
+                    });
+
+                    gerarTabelaEpisodios();
+
+                    for (const id in dados.links) {
+                        const campo = document.getElementById(id);
+                        if (campo) campo.value = dados.links[id];
+                    }
+
+                    alert("Rascunho carregado com sucesso!");
+                } catch (err) {
+                    alert("Erro ao carregar rascunho: " + err.message);
+                }
+            };
+
+            reader.readAsText(file);
+        }
+
+        function gerarCodigo() {
+            const id = parseInt(document.getElementById('id').value);
+            const generoStr = document.getElementById('genero').value;
+            const tagsArr = generoStr.split(',').map(t => `"${t.trim()}"`).join(', ');
+
+            const episodiosObj = [];
+            const total = parseInt(document.getElementById('episodiosTotal').value);
+            const qtdServ = parseInt(document.getElementById('qtdServidores').value || 1);
+            const servidores = [];
+            for (let i = 1; i <= qtdServ; i++) {
+                servidores.push(document.getElementById(`servidorNome${i}`).value || `servidor${i}`);
+            }
+
+            for (let i = 1; i <= total; i++) {
+                const downloads = {};
+                for (let s = 1; s <= qtdServ; s++) {
+                    const nome = servidores[s - 1];
+                    const url = document.getElementById(`ep${i}_serv${s}`).value.trim();
+                    if (url) downloads[nome] = url;
+                }
+                episodiosObj.push({ numero: i, downloads });
+            }
+            const episodiosStr = JSON.stringify(episodiosObj, null, 4)
+                .replace(/"([^"]+)":/g, '$1:');
+
+            const codigo = `{
+id: ${id},
+titulo: "${document.getElementById('titulo').value}",
+imagem: "img/id${id}/id${id}capa.webp",
+tags: [${tagsArr}],
+lancamento: "${document.getElementById('lancamento').value}",
+genero: "${generoStr}",
+episodiosTotal: ${parseInt(document.getElementById('episodiosTotal').value)},
+status: "${document.getElementById('status').value}",
+sinopse: "${document.getElementById('sinopse').value}",
+trailerUrl: "${document.getElementById('trailerUrl').value}",
+adicionadoEm: "${document.getElementById('adicionadoEm').value}",
+estudio: "${document.getElementById('estudio').value}",
+siteOficial: "${document.getElementById('siteOficial').value}",
+video: "${document.getElementById('video').value}",
+audio: "${document.getElementById('audio').value}",
+resolucao: "${document.getElementById('resolucao').value}",
+legendas: "${document.getElementById('legendas').value}",
+scriptOriginal: "${document.getElementById('scriptOriginal').value}",
+screenshots: [
+    "img/id${id}/shot1.webp",
+    "img/id${id}/shot2.webp",
+    "img/id${id}/shot3.webp",
+],
+episodios: ${episodiosStr},
+},`;
+
+            document.getElementById('output').textContent = codigo;
+        }
+
+        document.getElementById("trailerUrl").addEventListener("input", function () {
+            const valor = this.value.trim();
+            const match = valor.match(/src="([^"]+)"/);
+            if (match) {
+                this.value = match[1]; // Mantém só o URL do src
+            }
+        });
+    </script>
+</body>
+
+</html>

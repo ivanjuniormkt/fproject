@@ -350,6 +350,10 @@ footer {
     .search-bar-nav input#search-nav {
         width: 100% !important;
     }
+
+    .anime-info-text {
+    margin-top: 30px;
+}
 }
 
 tbody {
@@ -1039,6 +1043,7 @@ section.anime-details-header {
     transition: background-color 0.3s ease;
     transition: color 0.3s ease;
     text-decoration: underline;
+    text-transform: capitalize;
 }
 
 #sinopse-toggle:hover {
@@ -1575,5 +1580,92 @@ body.loading-active {
     100% {
         transform: translateY(-20px);
         /* Desloca a logo 20px para cima */
+    }
+}
+
+img#post-detail-image {
+    width: 100%;
+}
+
+.post-detail-container {
+    color: #ffffff;
+    text-align: center;
+    background-color: #051720;
+    padding: 20px;
+    border: 2px solid #214556;
+    border-top: 0 !important;
+}
+
+.inf-pmet {
+    display: flex;
+    gap: 8px;
+}
+
+.anime-card2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-align: left;
+}
+
+.anime-info {
+    width: 100%;
+}
+
+.anime-extra-info {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border: 3px solid #4b768b;
+    background-color: #08202c;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+div#related-project-card {
+    padding: 15px;
+    background-color: #214556;
+    margin: 50px;
+}
+
+.btn-acessar {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    font-size: 15px;
+    background-color: #1997d3;
+    padding: 2px 10px;
+}
+
+.btn-acessar:hover {
+    background-color: #1687bb;
+}
+
+@media (max-width: 768px) {
+    .anime-card2 {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    div#related-project-card {
+        margin: 30px 0px 0px !important;
+        padding: 15px !important;
+    }
+
+    .btn-acessar {
+        padding: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        margin-top: 10px !important;
+    }
+
+    .progress-bar {
+        height: 25px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
     }
 }

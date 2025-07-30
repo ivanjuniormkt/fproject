@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Se o campo não estiver vazio, redireciona o usuário para a página index.html
             // com o termo de busca incluído na URL como parâmetro (ex: ?search=naruto)
             if (searchTerm) {
-                window.location.href = `index.html?search=${encodeURIComponent(searchTerm)}`;
+                window.location.href = `projetos.html?search=${encodeURIComponent(searchTerm)}`;
                 // encodeURIComponent garante que espaços e caracteres especiais sejam seguros na URL
             }
         });
