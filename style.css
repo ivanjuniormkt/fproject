@@ -261,10 +261,6 @@ footer {
     line-height: normal;
 }
 
-.search-bar-nav input#search-nav {
-    font-size: 16px;
-}
-
 .search-bar-nav svg {
     width: 40px;
     /* ou o tamanho que quiser */
@@ -599,6 +595,10 @@ tr.linha-resolucao:after {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .search-bar-nav input#search-nav {
+        font-size: 16px;
     }
 
     .header-hero {
