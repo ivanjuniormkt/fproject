@@ -266,7 +266,8 @@ footer {
 }
 
 .search-bar-nav svg {
-    width: 40px; /* ou o tamanho que quiser */
+    width: 40px;
+    /* ou o tamanho que quiser */
     height: 40px;
 }
 
@@ -277,14 +278,6 @@ footer {
 .search-bar-nav svg {
     width: 32px;
     height: 32px;
-}
-
-button#hamburger-btn {
-    width: 55px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 button#search-button-nav {
@@ -600,6 +593,14 @@ tr.linha-resolucao:after {
         display: flex;
     }
 
+    button#hamburger-btn {
+        width: 55px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .header-hero {
         display: none;
     }
@@ -615,7 +616,7 @@ tr.linha-resolucao:after {
     .navbar-container {
         flex-direction: row-reverse;
         padding: 0 15px;
-        gap: 20px;
+        gap: 10px;
     }
 
     .main-nav {
