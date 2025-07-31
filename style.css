@@ -226,7 +226,6 @@ footer {
     border: 1px solid #214556;
     background-color: #051720;
     color: #ffffff;
-    font-size: 0.9em;
     width: 200px;
     transition: width 0.3s ease;
     border-radius: 0 !important;
@@ -604,10 +603,6 @@ tr.linha-resolucao:after {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .search-bar-nav input#search-nav {
-        font-size: 16px;
     }
 
     .header-hero {
@@ -1865,4 +1860,8 @@ img.profile {
 
 .responderBtn:hover {
     text-decoration: underline;
+}
+
+input#search-nav {
+    margin: 0;
 }
