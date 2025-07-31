@@ -110,13 +110,13 @@ function escapeHtml(texto) {
 }
 
 // === Lógica de Envio de Comentários ===
-// === Lógica de Envio de Comentários (ALINHADA E CORRETA) ===
+// === Lógica de Envio de Comentários (VERSÃO FINAL) ===
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const nome = form.nome.value.trim();
     const comentario = form.comentario.value.trim();
-    const parentId = parentIdInput.value; 
+    const parentId = parentIdInput.value;
 
     if (form.fakeEmail.value !== "") {
         return;
@@ -129,11 +129,14 @@ form.addEventListener('submit', (e) => {
     data.append(ENTRY_NOME, nome);
     data.append(ENTRY_COMENTARIO, comentario);
 
+    // Se é um comentário principal, enviamos o ID único para a coluna ID do Comentário Pai
     if (!parentId) {
         const novoIdPrincipal = "main_" + Date.now();
         data.append(ENTRY_PARENT_ID, novoIdPrincipal);
-
-    } else {
+    } 
+    // Se é uma resposta, enviamos o ID do pai para a coluna ID do Comentário Pai
+    // e o ID único da resposta para a coluna ID do Comentário
+    else {
         const novoIdResposta = "reply_" + Date.now();
         data.append(ENTRY_PARENT_ID, parentId);
         data.append(ENTRY_COMMENT_ID, novoIdResposta);
