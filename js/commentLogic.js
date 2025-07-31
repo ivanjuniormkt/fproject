@@ -5,11 +5,24 @@ const form = document.getElementById('comentarioForm');
 const lista = document.getElementById('listaComentarios');
 const erroComentario = document.getElementById("erroComentario");
 
+const contadorCaracteres = document.createElement('div');
+contadorCaracteres.id = 'contador-caracteres';
+contadorCaracteres.style.fontSize = '11px';
+contadorCaracteres.style.color = '#666';
+contadorCaracteres.style.textAlign = 'right';
+contadorCaracteres.style.marginTop = '0px';
+
+// Insere o contador após o campo de comentário
+form.comentario.insertAdjacentElement('afterend', contadorCaracteres);
+
 // Variáveis que serão preenchidas por data.js
 let FORM_URL;
 let ENTRY_NOME;
 let ENTRY_COMENTARIO;
 let CSV_URL;
+
+// Caracteres proibidos para CSV
+const caracteresProibidosCSV = /["\n\r,;]/g;
 
 // Garante que as variáveis globais sejam atribuídas
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const palavrasProibidasAnimes = [
-    "fdp", "fila da puta", "pau no cu", "cuzão", "merdinha", "cu", "buceta",
+    "fdp", "fila da puta", "filha da puta", "pau no cu", "cuzão", "merdinha", "cu", "buceta",
     "lixo", "verme", "nojento", "nojenta", "inútil", "retardado", "retardada",
     "inferno", "maldito", "maldita", "desgraçado", "desgraçada", "energúmeno",
     "piranha", "sirigaita", "quenga", "arrombado", "arrombada",
@@ -42,13 +55,26 @@ function normalizar(texto) {
 
 function contemPalavrasOfensivas(texto) {
     const textoLimpo = normalizar(texto);
-    return palavrasProibidasAnimes.some(palavra => textoLimpo.includes(palavra));
+    return palavrasProibidasAnimes.some(palavra => {
+        const regex = new RegExp(`\\b${palavra}\\b`, 'i');
+        return regex.test(textoLimpo);
+    });
+}
+
+function marcarPalavrasOfensivas(texto) {
+    const palavras = texto.split(/\s+/);
+    return palavras.map(palavra => {
+        const palavraNormalizada = normalizar(palavra);
+        const ofensiva = palavrasProibidasAnimes.some(proibida => 
+            palavraNormalizada.includes(proibida)
+        );
+        return ofensiva ? `<span style="background-color: #ff0000ff; border-radius: 3px;">${palavra}</span>` : palavra;
+    }).join(' ');
 }
 
 function validarCampos(nome, comentario) {
     const regexNome = /^[a-zA-ZÀ-ÿ0-9\s]{2,30}$/;
-    const regexComentario = /^[^<>]{1,500}$/;
-
+    
     form.comentario.classList.remove("erro");
     erroComentario.textContent = "";
 
@@ -57,8 +83,14 @@ function validarCampos(nome, comentario) {
         return false;
     }
 
-    if (!regexComentario.test(comentario)) {
-        erroComentario.textContent = "* Comentário inválido. Evite símbolos como < ou >.";
+    if (comentario.length > 300) {
+        erroComentario.textContent = "* Comentário muito longo. Máximo de 300 caracteres.";
+        form.comentario.classList.add("erro");
+        return false;
+    }
+
+    if (caracteresProibidosCSV.test(comentario)) {
+        erroComentario.textContent = "* Comentário contém caracteres inválidos (, \";\" quebras de linha etc).";
         form.comentario.classList.add("erro");
         return false;
     }
@@ -85,10 +117,52 @@ function podeComentar() {
 }
 
 function escapeHtml(texto) {
+    // Remove caracteres perigosos para CSV
+    texto = texto.replace(caracteresProibidosCSV, ' ');
+    
     const div = document.createElement('div');
     div.innerText = texto;
     return div.innerHTML;
 }
+
+// === Bloqueio TOTAL de quebras de linha ===
+form.comentario.addEventListener('keydown', function(e) {
+    // Bloqueia a tecla Enter completamente
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Validação em tempo real
+form.comentario.addEventListener('input', function(e) {
+    // Remove qualquer tentativa de quebra de linha
+    if (this.value.includes('\n') || this.value.includes('\r')) {
+        this.value = this.value.replace(/[\n\r]/g, '');
+    }
+    
+    // Atualiza contador de caracteres
+    const restantes = 300 - this.value.length;
+    contadorCaracteres.textContent = `${restantes} caracteres restantes`;
+    contadorCaracteres.style.color = restantes < 0 ? 'red' : '#666';
+    
+    // Marca palavras ofensivas (visualização)
+    if (contemPalavrasOfensivas(this.value)) {
+        const preview = document.getElementById('previewOfensivas') || 
+                       document.createElement('div');
+        preview.id = 'previewOfensivas';
+        preview.style.color = '#ff0000ff';
+        preview.style.fontSize = '12px';
+        preview.innerHTML = `<strong>Aviso:</strong> Palavras ofensivas detectadas o comentario não será publicado: "${marcarPalavrasOfensivas(this.value)}"`;
+        
+        if (!document.getElementById('previewOfensivas')) {
+            this.parentNode.appendChild(preview);
+        }
+    } else {
+        const preview = document.getElementById('previewOfensivas');
+        if (preview) preview.remove();
+    }
+});
 
 // === Lógica de Envio de Comentários ===
 form.addEventListener('submit', (e) => {
@@ -122,7 +196,7 @@ form.addEventListener('submit', (e) => {
 
     setTimeout(() => {
         carregarComentarios();
-    }, 1000); // espera 1 segundo antes de recarregar
+    }, 1000);
 });
 
 // === Lógica de Carregamento de Comentários ===
