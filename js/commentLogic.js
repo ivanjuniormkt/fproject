@@ -65,16 +65,16 @@ function marcarPalavrasOfensivas(texto) {
     const palavras = texto.split(/\s+/);
     return palavras.map(palavra => {
         const palavraNormalizada = normalizar(palavra);
-        const ofensiva = palavrasProibidasAnimes.some(proibida => 
+        const ofensiva = palavrasProibidasAnimes.some(proibida =>
             palavraNormalizada.includes(proibida)
         );
-        return ofensiva ? `<span style="background-color: #ff0000ff; border-radius: 3px;">${palavra}</span>` : palavra;
+        return ofensiva ? `<span style="text-decoration: underline; color: #ff0000ff;">fdp</span>` : palavra;
     }).join(' ');
 }
 
 function validarCampos(nome, comentario) {
     const regexNome = /^[a-zA-ZÀ-ÿ0-9\s]{2,30}$/;
-    
+
     form.comentario.classList.remove("erro");
     erroComentario.textContent = "";
 
@@ -107,7 +107,7 @@ function validarCampos(nome, comentario) {
 function podeComentar() {
     const ultimoEnvio = localStorage.getItem("ultimoComentario");
     const agora = Date.now();
-    if (ultimoEnvio && agora - ultimoEnvio < 10) {
+    if (ultimoEnvio && agora - ultimoEnvio < 60000) {
         erroComentario.textContent = "* Espere pelo menos 1 minuto antes de enviar outro comentário.";
         form.comentario.classList.add("erro");
         return false;
@@ -119,14 +119,14 @@ function podeComentar() {
 function escapeHtml(texto) {
     // Remove caracteres perigosos para CSV
     texto = texto.replace(caracteresProibidosCSV, ' ');
-    
+
     const div = document.createElement('div');
     div.innerText = texto;
     return div.innerHTML;
 }
 
 // === Bloqueio TOTAL de quebras de linha ===
-form.comentario.addEventListener('keydown', function(e) {
+form.comentario.addEventListener('keydown', function (e) {
     // Bloqueia a tecla Enter completamente
     if (e.key === 'Enter') {
         e.preventDefault();
@@ -135,26 +135,26 @@ form.comentario.addEventListener('keydown', function(e) {
 });
 
 // Validação em tempo real
-form.comentario.addEventListener('input', function(e) {
+form.comentario.addEventListener('input', function (e) {
     // Remove qualquer tentativa de quebra de linha
     if (this.value.includes('\n') || this.value.includes('\r')) {
         this.value = this.value.replace(/[\n\r]/g, '');
     }
-    
+
     // Atualiza contador de caracteres
     const restantes = 300 - this.value.length;
     contadorCaracteres.textContent = `${restantes} caracteres restantes`;
     contadorCaracteres.style.color = restantes < 0 ? 'red' : '#666';
-    
+
     // Marca palavras ofensivas (visualização)
     if (contemPalavrasOfensivas(this.value)) {
-        const preview = document.getElementById('previewOfensivas') || 
-                       document.createElement('div');
+        const preview = document.getElementById('previewOfensivas') ||
+            document.createElement('div');
         preview.id = 'previewOfensivas';
-        preview.style.color = '#ff0000ff';
+        preview.style.color = '#ff6666';
         preview.style.fontSize = '12px';
         preview.innerHTML = `<strong>Aviso:</strong> Palavras ofensivas detectadas o comentario não será publicado: "${marcarPalavrasOfensivas(this.value)}"`;
-        
+
         if (!document.getElementById('previewOfensivas')) {
             this.parentNode.appendChild(preview);
         }
@@ -232,16 +232,22 @@ function carregarComentarios() {
             for (const c of comentarios) {
                 const el = document.createElement("div");
                 el.className = "comentario";
+
+                // SVG do verificado (simulando o verificado do Instagram)
+                const verificadoSvg = c.nome === "AbsoluteSUB" ? `
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1997d3" style="height: 29px;width: 19px;"><path d="m352.46-85.39-71.38-120.3-135.54-29.7 13.23-139.53L66.93-480l91.84-105.08-13.23-139.53 135.54-29.7 71.38-120.3L480-820.46l127.54-54.15 71.38 120.3 135.54 29.7-13.23 139.53L893.07-480l-91.84 105.08 13.23 139.53-135.54 29.7-71.38 120.3L480-139.54 352.46-85.39ZM378-162l102-43.23L583.23-162 640-258l110-25.23L740-396l74-84-74-85.23L750-678l-110-24-58-96-102 43.23L376.77-798 320-702l-110 24 10 112.77L146-480l74 84-10 114 110 24 58 96Zm102-318Zm-42 128.15L650.15-564 608-607.38l-170 170-86-84.77L309.85-480 438-351.85Z"/></svg>
+    ` : '';
+
                 el.innerHTML = `
-                    <img class="profile" src="img/assets/profile.webp" alt="profile">
-                    <div style="width: 100%;">
-                        <div class="comentario-meta">
-                            <strong>${c.nome}</strong>
-                            <div style="font-size: 12px; color: #898989;">${c.data}</div>
-                        </div>
-                        <div class="com">${c.comentario}</div>
-                    </div>
-                `;
+        <img class="profile" src="img/assets/profile.webp" alt="profile">
+        <div style="width: 100%;">
+            <div class="comentario-meta">
+                <strong style="display: flex; flex-direction: row; align-items: center; gap: 3px; height: 21px;">${c.nome} ${verificadoSvg}</strong>
+                <div style="font-size: 12px; color: #898989;">${c.data}</div>
+            </div>
+            <div class="com">${c.comentario}</div>
+        </div>
+    `;
                 container.appendChild(el);
             }
 
