@@ -106,6 +106,10 @@ const animes = [
         resolucao: "720p",
         legendas: "HardSub",
         scriptOriginal: "Mushin",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdCYW8HETQEARKiaKI2-WjXzwU9DLwtv-XhmAvSO4FAqBSQOA/formResponse",
+        entry_nome: "entry.1818578086",
+        entry_comentario: "entry.1939084279",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vR6XX6fvDy2Cm4YP4WONMM84cTWrTNE3IR98o7nIBBcbQCiV63DtrWu8_iZCVTmRI3Hoj60tFEtZxJX/pub?gid=1151780813&single=true&output=csv",
         screenshots: [
             "img/id3/shot1.webp",
             "img/id3/shot2.webp",
@@ -137,6 +141,10 @@ const animes = [
         resolucao: "1080p",
         legendas: "Softsub",
         scriptOriginal: "FFF",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSePH2t_hgJPph4zDfPo0u2wYt1S5uBEbIWtCLEbglVgC31eFQ/formResponse",
+        entry_nome: "entry.1113381524",
+        entry_comentario: "entry.516866698",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTkWC9Xb3GeaKoUyV20VJvEQvJi0vTnLNSRZKFqssObE49etgd9pTv8RuTXKnjHf2vMCL7aWlgy5ek3/pub?gid=1547713957&single=true&output=csv",
         screenshots: [
             "img/id4/shot1.webp",
             "img/id4/shot2.webp",
@@ -165,6 +173,10 @@ const animes = [
         resolucao: "720p",
         legendas: "Softsub",
         scriptOriginal: "Erai-raws",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSckTrXhMTGT_CIZeioRGxQl3mNvwoIaHGMASKlwIaoquzymvA/formResponse",
+        entry_nome: "entry.424622592",
+        entry_comentario: "entry.1595511638",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQOeIRSb8P0G4O432qm8VXSz-o3IpAWE_hcaTQUyM7WaZ4JunZpd2yf7war7fRBTbSRnxVQfJARPa7h/pub?gid=1011914232&single=true&output=csv",
         screenshots: [
             "img/id5/shot1.webp",
             "img/id5/shot2.webp",
@@ -206,6 +218,10 @@ const animes = [
         resolucao: "1080p",
         legendas: "HardSub",
         scriptOriginal: "Funi",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSepR4UsiirG13b4-1mPFbSGLt2ROCOYdQuCYtOdUroAqcKWlw/formResponse",
+        entry_nome: "entry.194848450",
+        entry_comentario: "entry.632247960",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vS_upou7fjI6Zu4rY0O44HRdYJ_Jk_EoGMBGzz5s_flNwK-CO4GbWPEC9EOJJq-S03EHj5-h8BGnYDo/pub?gid=2113947616&single=true&output=csv",
         screenshots: [
             "img/id6/shot1.webp",
             "img/id6/shot2.webp",

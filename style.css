@@ -1718,6 +1718,21 @@ div#related-project-card {
         align-items: center;
         justify-content: center;
     }
+
+    .comentario-meta {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0 !important;
+    }
+
+    img.profile {
+        height: 45px !important;
+        padding-right: 8px !important;
+    }
+
+    .comentario {
+        gap: 10px !important;
+    }
 }
 
 .anime-links a:hover {
@@ -1838,7 +1853,8 @@ textarea {
 }
 
 textarea:focus {
-  border: 1px solid #214556; /* borda azul ao focar */
+    border: 1px solid #214556;
+    /* borda azul ao focar */
 }
 
 img.profile {
