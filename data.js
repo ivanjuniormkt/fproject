@@ -64,12 +64,15 @@ const animes = [
         resolucao: "720p",
         legendas: "Softsub",
         scriptOriginal: "Glenn",
-        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScC4-aVWZjRE4eNd-aLYnMPudQBdY3PRk_I1Ad8GWbFrSXTfQ/formResponse",
-        entry_nome: "entry.1782582005",
-        entry_comentario: "entry.930358843",
-        entry_parent_id: "entry.514211852",
-        entry_comment_id: "entry.1181112545",
-        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSK0SUvWtRt-P8QSlI6KIJ6Cs8wif6CqBNOV2MPnBW1K6KD5-mZI6BD2ywaWTBJEYynkvp0xcgvkg-t/pub?gid=1403439820&single=true&output=csv",
+        const FORM_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScC4-aVWZjRE4eNd-aLYnMPudQBdY3PRk_I1Ad8GWbFrSXTfQ/formResponse";
+        const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSK0SUvWtRt-P8QSlI6KIJ6Cs8wif6CqBNOV2MPnBW1K6KD5-mZI6BD2ywaWTBJEYynkvp0xcgvkg-t/pub?gid=1403439820&single=true&output=csv";
+
+        const ENTRY_NOME = "entry.1782582005";
+        const ENTRY_COMENTARIO = "entry.930358843";
+
+        // ATENÇÃO: Os IDs foram trocados aqui
+        const ENTRY_COMMENT_ID = "entry.514211852";
+        const ENTRY_PARENT_ID = "entry.1181112545";
         screenshots: [
             "img/id2/shot1.webp",
             "img/id2/shot2.webp",
