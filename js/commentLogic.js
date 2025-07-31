@@ -119,65 +119,66 @@ form.addEventListener('submit', (e) => {
         console.error('Erro ao enviar comentário:', error);
         erroComentario.textContent = "Ocorreu um erro ao enviar seu comentário. Tente novamente.";
     });
+
+    setTimeout(() => {
+        carregarComentarios();
+    }, 1000); // espera 1 segundo antes de recarregar
 });
 
 // === Lógica de Carregamento de Comentários ===
-async function carregarComentarios() {
-    if (!CSV_URL) {
-        lista.innerHTML = "<p>Nenhum URL de comentários configurado.</p>";
-        return;
-    }
+function carregarComentarios() {
+    fetch(CSV_URL)
+        .then(response => response.text())
+        .then(data => {
+            const linhas = data.split("\n").slice(1); // ignora cabeçalho
+            const comentarios = [];
 
-    lista.innerHTML = "Carregando comentários...";
-    try {
-        const res = await fetch(CSV_URL);
-        const texto = await res.text();
-        const linhas = texto.trim().split("\n");
+            for (const linha of linhas) {
+                if (!linha.trim()) continue; // ignora linha vazia
 
-        if (linhas.length < 2) {
-            lista.innerHTML = "<p>Sem comentários ainda.</p>";
-            return;
-        }
+                // Extrai colunas, tratando vírgulas dentro de aspas
+                const colunas = linha.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g)?.map(c => c.replace(/^"|"$/g, ""));
 
-        const cabecalho = linhas[0].split(",");
-        const indiceTimestamp = cabecalho.findIndex(h => h.trim() === "Carimbo de data/hora");
-        const indiceNome = cabecalho.findIndex(h => h.trim() === "Nome");
-        const indiceComentario = cabecalho.findIndex(h => h.trim() === "Comentário");
+                // Garante que temos pelo menos nome e comentário
+                if (!colunas || colunas.length < 3) continue;
 
-        if (indiceTimestamp === -1 || indiceNome === -1 || indiceComentario === -1) {
-            console.error("Erro: Uma ou mais colunas esperadas não foram encontradas no CSV.");
-            lista.innerHTML = "<p>Erro ao carregar comentários.</p>";
-            return;
-        }
+                const timestamp = colunas[0];
+                const nome = colunas[1];
+                const comentario = colunas[2];
 
-        const comentarios = linhas.slice(1).map(linha => {
-            const colunas = linha.split(",");
-            return {
-                nome: escapeHtml(colunas[indiceNome]?.trim() || "Anônimo"),
-                data: colunas[indiceTimestamp]?.trim(),
-                comentario: escapeHtml(colunas[indiceComentario]?.trim() || "")
-            };
-        });
+                // ignora linhas vazias
+                if (!nome || !comentario) continue;
 
-        comentarios.sort((a, b) => new Date(b.data) - new Date(a.data));
+                comentarios.push({ nome, comentario, timestamp });
+            }
 
-        const finalHtml = comentarios.map(c => `
-            <div class="comentario">
-                <img class="profile" src="img/assets/profile.webp" alt="profile">
-                <div style="width: 100%;">
-                    <div class="comentario-meta">
-                        <strong>${c.nome}</strong>
-                        <div style="font-size: 12px; color: #898989;">${c.data}</div>
+            // Exibe os comentários em ordem do mais recente para o mais antigo
+            comentarios.reverse();
+
+            const container = document.getElementById("listaComentarios");
+            container.innerHTML = "";
+
+            for (const c of comentarios) {
+                const el = document.createElement("div");
+                el.className = "comentario";
+                el.innerHTML = `
+                    <div class="avatar">
+                        <img src="/img/avatar.webp" alt="Avatar">
                     </div>
-                    <div class="com">${c.comentario}</div>
-                </div>
-            </div>
-        `).join("");
+                    <div class="conteudo">
+                        <p><strong>${c.nome}</strong> <span class="data">${c.timestamp}</span></p>
+                        <p>${c.comentario}</p>
+                    </div>
+                `;
+                container.appendChild(el);
+            }
 
-        lista.innerHTML = finalHtml;
-
-    } catch (error) {
-        console.error("Erro ao carregar comentários:", error);
-        lista.innerHTML = "<p>Erro ao carregar comentários.</p>";
-    }
+            if (comentarios.length === 0) {
+                container.innerHTML = "<p>Nenhum comentário ainda.</p>";
+            }
+        })
+        .catch(error => {
+            console.error("Erro ao carregar comentários:", error);
+            document.getElementById("listaComentarios").innerHTML = "<p>Erro ao carregar comentários.</p>";
+        });
 }
