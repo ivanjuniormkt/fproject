@@ -323,4 +323,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    window.commentConfig = {
+        FORM_URL: anime.form_url,
+        ENTRY_NOME: anime.entry_nome,
+        ENTRY_COMENTARIO: anime.entry_comentario,
+        ENTRY_PARENT_ID: anime.entry_parent_id,
+        CSV_URL: anime.csv_url
+    };
+
+    // Chama a função global do 'comentarios.js' para carregar os comentários.
+    // Garante que a função existe antes de chamar.
+    if (typeof carregarComentarios === 'function') {
+        carregarComentarios();
+    } else {
+        console.error("A função 'carregarComentarios' não está disponível. Verifique a ordem dos scripts.");
+        // Opcional: Mostre uma mensagem de erro na UI se os comentários não puderem ser carregados.
+        const commentsSection = document.getElementById('commentsSection');
+        if (commentsSection) {
+            commentsSection.innerHTML = '<p style="text-align: center; color: red;">Não foi possível carregar os comentários. Verifique a configuração.</p>';
+        }
+    }
+
 });

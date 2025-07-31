@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -452,6 +456,12 @@ p#anime-adicionado-em {
 
 strong {
     font-weight: 600;
+    font-size: 14px;
+}
+
+.com {
+    color: #ffffffbf;
+    font-size: 14px;
 }
 
 .media-sections {
@@ -579,7 +589,6 @@ tr.linha-resolucao:after {
 .hamburger span {
     height: 3px;
     background: white;
-    border-radius: 2px;
     width: 100%;
     display: block;
 }
@@ -797,7 +806,6 @@ tr.linha-resolucao:after {
     color: white;
     border: 1px solid #444;
     padding: 16px;
-    border-radius: 8px;
     max-width: 300px;
     margin-top: 10px;
     z-index: 999;
@@ -870,7 +878,6 @@ tr.linha-resolucao:after {
     flex-grow: 1;
     padding: 8px;
     border: 1px solid #444;
-    border-radius: 4px 0 0 4px;
     background-color: #2e2e2e;
     color: white;
 }
@@ -880,7 +887,6 @@ tr.linha-resolucao:after {
     background-color: #236283;
     color: white;
     border: none;
-    border-radius: 0 4px 4px 0;
     cursor: pointer;
 }
 
@@ -1717,4 +1723,132 @@ div#related-project-card {
         align-items: center;
         justify-content: center;
     }
+}
+
+.anime-links a:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos do sistema de comentários (mantidos do seu CSS original e ajustados para tema escuro) */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: #3a3a3a;
+    border: 1px solid #555;
+    color: #f0f0f0;
+}
+
+button {
+    background-color: #1997d3;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.comentario {
+    border: 1px solid #2145568f;
+    padding: 10px;
+    background-color: #08202c;
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    margin-top: 10px;
+}
+
+.comentario-meta {
+    font-size: 0.85em;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.resposta {
+    margin-left: 30px;
+    border-left: 3px solid #1997d3;
+    margin-top: 0 !important;
+}
+
+.honeypot {
+    display: none;
+}
+
+.erro-msg {
+    color: #ff6666;
+    /* Vermelho mais claro para tema escuro */
+    font-size: 13px;
+    margin-top: -5px;
+    display: block;
+}
+
+textarea.erro {
+    border: 1px solid #ff6666;
+}
+
+div#listaComentarios {
+    margin-top: 15px;
+}
+
+.reply-button {
+    background: #008CBA;
+    /* Azul para o botão de responder */
+    padding: 5px 10px;
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+.reply-form-container {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #214556;
+}
+
+.cancel-reply-button {
+    background: #08202c;
+    /* Vermelho para o botão de cancelar */
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+section#secaoComentarios {
+    background-color: #051720;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: #08202c;
+    border: 1px solid #214556;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif !important;
+    resize: none;
+    outline: none;
+}
+
+textarea:focus {
+  border: 1px solid #214556; /* borda azul ao focar */
+}
+
+img.profile {
+    height: 60px;
+    width: auto;
+    padding-right: 13px;
+    border-right: 2px solid #2145568f;
 }

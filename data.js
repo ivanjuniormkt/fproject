@@ -18,6 +18,11 @@ const animes = [
         resolucao: "1080p",
         legendas: "Softsub",
         scriptOriginal: "indisponível",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfZY5QlRMls-HxSjTri_AuoChr8bo-qWetYbuTu7_HpibfSlA/formResponse",
+        entry_nome: "entry.647162139",
+        entry_comentario: "entry.1112606451",
+        entry_parent_id: "entry.667040362",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTN6J6aHh3tFGuQa_oqOl4o_D7DPiKGOPVISo7K566Xwm0nmWfKdVBFrN1Gm4Qhr1bNAMQeqXQn4JiZ/pub?gid=1552139553&single=true&output=csv",
         screenshots: [
             "img/id1/shot1.webp",
             "img/id1/shot2.webp",
@@ -59,6 +64,12 @@ const animes = [
         resolucao: "720p",
         legendas: "Softsub",
         scriptOriginal: "Glenn",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScC4-aVWZjRE4eNd-aLYnMPudQBdY3PRk_I1Ad8GWbFrSXTfQ/formResponse",
+        entry_nome: "entry.1782582005",
+        entry_comentario: "entry.930358843",
+        entry_parent_id: "entry.514211852",
+        entry_comment_id: "entry.1181112545",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSK0SUvWtRt-P8QSlI6KIJ6Cs8wif6CqBNOV2MPnBW1K6KD5-mZI6BD2ywaWTBJEYynkvp0xcgvkg-t/pub?gid=1403439820&single=true&output=csv",
         screenshots: [
             "img/id2/shot1.webp",
             "img/id2/shot2.webp",
@@ -1073,6 +1084,118 @@ const animes = [
                     pixeldrain: "https://pixeldrain.com/u/HtLDmCuo"
                 }
             },
+        ],
+    },
+    {
+        id: 21,
+        titulo: "Queen’s Blade: UNLIMITED",
+        imagem: "img/id21/id21capa.webp",
+        tags: ["Aventura", "Ação", "Ecchi", "Fantasia"],
+        lancamento: "2018",
+        genero: "Aventura, Ação, Ecchi, Fantasia",
+        episodiosTotal: 2,
+        status: "Finalizado",
+        sinopse: "A história se passa no reino mágico de Gynos, onde mulheres guerreiras duelam para determinar quem tem o direito de governar.",
+        trailerUrl: "https://www.youtube.com/embed/reyxM26mC2A",
+        adicionadoEm: "4 de ago de 2022",
+        estudio: "FORTES",
+        siteOficial: "https://queensblade.net/unlimited/",
+        video: "x264 10Bit",
+        audio: "Flac",
+        resolucao: "1080p",
+        legendas: "HardSub",
+        scriptOriginal: "Original Absolute",
+        screenshots: [
+            "img/id21/shot1.webp",
+            "img/id21/shot2.webp",
+            "img/id21/shot3.webp",
+        ],
+        episodios: [
+            {
+                numero: 1,
+                downloads: {
+                    terabox: "https://terabox.com/s/16iSIXT4sPbugSiZdiephxw"
+                }
+            },
+            {
+                numero: 2,
+                downloads: {
+                    terabox: "https://terabox.com/s/1XpfIxKAT9W6yWtQW0HcvyA"
+                }
+            },
+            {
+                numero: "1-2",
+                downloads: {
+                    nyaa: "https://nyaa.si/view/1675474"
+                }
+            }
+        ],
+    },
+    {
+        id: 22,
+        titulo: "Minna! ESPer Dayo! Yokubou Darake no Love Wars",
+        imagem: "img/id22/id22capa.webp",
+        tags: ["Comédia", "Escolar", "Sobrenatural"],
+        lancamento: "2015",
+        genero: "Comédia, Escolar, Sobrenatural",
+        episodiosTotal: 1,
+        status: "Finalizado",
+        sinopse: "Após ser atingido por uma explosão cósmica enquanto se masturba, um adolescente virginal ganha poderes psíquicos e se junta a um grupo de virgens com PES para defender o mundo dos psíquicos malignos.",
+        trailerUrl: "https://www.youtube.com/embed/RIVoY7Rn4js",
+        adicionadoEm: "14 de maio de 2025",
+        estudio: "TV Tokyo e Dentsu",
+        siteOficial: "https://esper-movie.gaga.ne.jp/",
+        video: "x264 10Bit",
+        audio: "AAC",
+        resolucao: "480p",
+        legendas: "HardSub",
+        scriptOriginal: "SkewedS-H!F",
+        screenshots: [
+            "img/id22/shot1.webp",
+            "img/id22/shot2.webp",
+            "img/id22/shot3.webp",
+        ],
+        episodios: [
+            {
+                numero: 1,
+                downloads: {
+                    pixeldrain: "https://pixeldrain.com/u/RTd8snSX"
+                }
+            }
+        ],
+    },
+    {
+        id: 23,
+        titulo: "Murenase! Seton Gakuen Special",
+        imagem: "img/id23/id23capa.webp",
+        tags: ["Comédia", "Escolar"],
+        lancamento: "2012",
+        genero: "Comédia, Escolar",
+        episodiosTotal: 1,
+        status: "Finalizado",
+        sinopse: "Episódio adicional presente no 3º volume do Blu-ray.",
+        trailerUrl: "https://www.youtube.com/embed/56_mMbRCMzc",
+        adicionadoEm: "19 de agosto de 2022",
+        estudio: "Studio Gokumi",
+        siteOficial: "https://anime-seton.jp/",
+        video: "x264 10Bit",
+        audio: "FLAC",
+        resolucao: "1080p",
+        legendas: "HardSub",
+        scriptOriginal: "ReinForce",
+        screenshots: [
+            "img/id23/shot1.webp",
+            "img/id23/shot2.webp",
+            "img/id23/shot3.webp",
+        ],
+        episodios: [
+            {
+                numero: 1,
+                downloads: {
+                    terabox: "https://terabox.com/s/1v7t_nfS7puEi10CBbeiWVQ",
+                    nyaa: "https://nyaa.si/view/1675473"
+                }
+            }
         ],
     },
 ];
