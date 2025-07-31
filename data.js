@@ -274,6 +274,10 @@ const animes = [
         resolucao: "1080p",
         legendas: "HardSub",
         scriptOriginal: "Noem-light",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSe8WXmSl12KQ4UJYVut8hUglKie4z-JfBMfGOfGuxMa9tedAw/formResponse",
+        entry_nome: "entry.632417038",
+        entry_comentario: "entry.164232694",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTJMkOm0kzBujyGX5Xu4xMTKOq7MaA1VSHXfQEBMBOYFzjSVYfLQFuGZVzWcvBBmKqJ4keeZO5MW1Th/pub?gid=1043593387&single=true&output=csv",
         screenshots: [
             "img/id7/shot1.webp",
             "img/id7/shot2.webp",
@@ -313,6 +317,10 @@ const animes = [
         resolucao: "1080p",
         legendas: "Softsub",
         scriptOriginal: "Asakura",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeOWQtezX4h3EZRQp4bTeX2rrjt9BYEK4SJY3ZksgXt0zB_6A/formResponse",
+        entry_nome: "entry.1888319010",
+        entry_comentario: "entry.372282454",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTeAu8RzHHsriWfK7iF4Cc7RD3pFrGpTvIwm7Kd5m0oSpep7_yxn2INZf3h0UWXXrcvCpygcrFCKObE/pub?gid=1756106143&single=true&output=csv",
         screenshots: [
             "img/id8/shot1.webp",
             "img/id8/shot2.webp",
@@ -345,6 +353,10 @@ const animes = [
         resolucao: "1080p",
         legendas: "HardSub",
         scriptOriginal: "Original Absolute",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeO7ZP3peYxxcpYRY7OzKiXrWC35PXSG5CipdtYD_E98YL7pQ/formResponse",
+        entry_nome: "entry.332736380",
+        entry_comentario: "entry.541744190",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSwOGdrhIdA-clENYWNQrUJbleOhIw-XD4rvOpOsELh_Zr2z-_mF3wiSW6wtTJOEPT815aPKKSfJbCU/pub?gid=1905033147&single=true&output=csv",
         screenshots: [
             "img/id9/shot1.webp",
             "img/id9/shot2.webp",
