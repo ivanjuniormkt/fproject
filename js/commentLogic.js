@@ -1,17 +1,16 @@
-// comentarios.js
-
 // === Variáveis e Elementos do Comentário ===
 const form = document.getElementById('comentarioForm');
 const lista = document.getElementById('listaComentarios');
 const erroComentario = document.getElementById("erroComentario");
 
-// Variáveis que serão preenchidas por data.js
 let FORM_URL;
 let ENTRY_NOME;
 let ENTRY_COMENTARIO;
 let CSV_URL;
 
-// Garante que as variáveis globais sejam atribuídas
+let carregandoComentarios = false;
+
+// === Configuração Inicial ===
 document.addEventListener('DOMContentLoaded', () => {
     if (window.commentConfig) {
         FORM_URL = window.commentConfig.FORM_URL;
@@ -21,11 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         carregarComentarios();
     } else {
-        console.error("window.commentConfig não foi definido. Comentários não serão carregados corretamente.");
-        lista.innerHTML = "<p>Erro na configuração dos comentários. Por favor, tente novamente mais tarde.</p>";
+        console.error("Configuração de comentários ausente.");
+        lista.innerHTML = "<p>Erro na configuração dos comentários.</p>";
     }
 });
 
+// === Filtros e Validações ===
 const palavrasProibidasAnimes = [
     "fdp", "fila da puta", "pau no cu", "cuzão", "merdinha", "cu", "buceta",
     "lixo", "verme", "nojento", "nojenta", "inútil", "retardado", "retardada",
@@ -35,7 +35,6 @@ const palavrasProibidasAnimes = [
     "bandido", "bandida", "marginal", "marginais"
 ];
 
-// === Funções de Validação e Utilidade ===
 function normalizar(texto) {
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
@@ -64,7 +63,7 @@ function validarCampos(nome, comentario) {
     }
 
     if (contemPalavrasOfensivas(comentario)) {
-        erroComentario.textContent = "* Seu comentário contém palavras inadequadas. Por favor, seja respeitoso.";
+        erroComentario.textContent = "* Seu comentário contém palavras inadequadas.";
         form.comentario.classList.add("erro");
         return false;
     }
@@ -75,22 +74,22 @@ function validarCampos(nome, comentario) {
 function podeComentar() {
     const ultimoEnvio = localStorage.getItem("ultimoComentario");
     const agora = Date.now();
-    if (ultimoEnvio && agora - ultimoEnvio < 10) {
-        erroComentario.textContent = "* Espere pelo menos 1 minuto antes de enviar outro comentário.";
-        form.comentario.classList.add("erro");
+    if (ultimoEnvio && agora - ultimoEnvio < 10000) {
+        erroComentario.textContent = "* Aguarde alguns segundos antes de comentar novamente.";
         return false;
     }
     localStorage.setItem("ultimoComentario", agora);
     return true;
 }
 
+// === Escapando HTML (segurança) ===
 function escapeHtml(texto) {
     const div = document.createElement('div');
     div.innerText = texto;
     return div.innerHTML;
 }
 
-// === Lógica de Envio de Comentários ===
+// === Envio do Formulário ===
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -106,6 +105,8 @@ form.addEventListener('submit', (e) => {
     data.append(ENTRY_NOME, nome);
     data.append(ENTRY_COMENTARIO, comentario);
 
+    mostrarLoading();
+
     fetch(FORM_URL, {
         method: "POST",
         mode: "no-cors",
@@ -113,47 +114,58 @@ form.addEventListener('submit', (e) => {
     }).then(() => {
         form.reset();
         erroComentario.textContent = "";
-        form.comentario.classList.remove("erro");
-        carregarComentarios();
+        setTimeout(() => {
+            carregarComentarios();
+        }, 4000); // Aguardar 4 segundos antes de recarregar
     }).catch(error => {
         console.error('Erro ao enviar comentário:', error);
-        erroComentario.textContent = "Ocorreu um erro ao enviar seu comentário. Tente novamente.";
+        erroComentario.textContent = "Erro ao enviar o comentário. Tente novamente.";
     });
-
-    setTimeout(() => {
-        carregarComentarios();
-    }, 1000); // espera 1 segundo antes de recarregar
 });
 
-// === Lógica de Carregamento de Comentários ===
+// === Animação de Carregando ===
+function mostrarLoading() {
+    lista.innerHTML = "<p>⏳ Carregando comentários...</p>";
+}
+
+// === Parser CSV Robusto ===
+function parseCSV(text) {
+    const linhas = text.split("\n");
+    const dados = [];
+
+    for (let i = 1; i < linhas.length; i++) {
+        const linha = linhas[i].trim();
+        if (!linha) continue;
+
+        const matches = linha.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
+        if (!matches || matches.length < 3) continue;
+
+        const [timestamp, nome, comentario] = matches.map(c => c.replace(/^"|"$/g, "").replace(/""/g, '"'));
+        if (!nome || !comentario) continue;
+
+        dados.push({ nome, comentario, data: timestamp });
+    }
+
+    return dados;
+}
+
+// === Carregar Comentários ===
 function carregarComentarios() {
-    fetch(CSV_URL)
+    if (carregandoComentarios) return;
+    carregandoComentarios = true;
+
+    mostrarLoading();
+
+    fetch(CSV_URL + `?t=${Date.now()}`) // força nova leitura (sem cache)
         .then(response => response.text())
         .then(data => {
-            const linhas = data.split("\n").slice(1); // ignora cabeçalho
-            const comentarios = [];
+            const comentarios = parseCSV(data).reverse();
+            lista.innerHTML = "";
 
-            for (const linha of linhas) {
-                if (!linha.trim()) continue;
-
-                // Extrai colunas respeitando vírgulas dentro de aspas
-                const colunas = linha.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g)?.map(c => c.replace(/^"|"$/g, ""));
-
-                if (!colunas || colunas.length < 3) continue;
-
-                const timestamp = colunas[0];
-                const nome = colunas[1];
-                const comentario = colunas[2];
-
-                if (!nome || !comentario) continue;
-
-                comentarios.push({ nome, comentario, data: timestamp });
+            if (comentarios.length === 0) {
+                lista.innerHTML = "<p>Nenhum comentário ainda.</p>";
+                return;
             }
-
-            comentarios.reverse(); // do mais recente para o mais antigo
-
-            const container = document.getElementById("listaComentarios");
-            container.innerHTML = "";
 
             for (const c of comentarios) {
                 const el = document.createElement("div");
@@ -162,21 +174,20 @@ function carregarComentarios() {
                     <img class="profile" src="img/assets/profile.webp" alt="profile">
                     <div style="width: 100%;">
                         <div class="comentario-meta">
-                            <strong>${c.nome}</strong>
-                            <div style="font-size: 12px; color: #898989;">${c.data}</div>
+                            <strong>${escapeHtml(c.nome)}</strong>
+                            <div style="font-size: 12px; color: #898989;">${escapeHtml(c.data)}</div>
                         </div>
-                        <div class="com">${c.comentario}</div>
+                        <div class="com">${escapeHtml(c.comentario)}</div>
                     </div>
                 `;
-                container.appendChild(el);
-            }
-
-            if (comentarios.length === 0) {
-                container.innerHTML = "<p>Nenhum comentário ainda.</p>";
+                lista.appendChild(el);
             }
         })
         .catch(error => {
             console.error("Erro ao carregar comentários:", error);
-            document.getElementById("listaComentarios").innerHTML = "<p>Erro ao carregar comentários.</p>";
+            lista.innerHTML = "<p>Erro ao carregar comentários.</p>";
+        })
+        .finally(() => {
+            carregandoComentarios = false;
         });
 }
