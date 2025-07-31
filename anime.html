@@ -129,18 +129,19 @@
                         <section class="comentarios" id="secaoComentarios">
                             <h2 style="margin: 0px 0px 6px 0px;">Deixe seu comentário</h2>
                             <form id="comentarioForm">
-                                <textarea name="comentario" placeholder="Digite seu comentário..." rows="4"
-                                    required style="margin-bottom: 0;"></textarea>
+                                <textarea name="comentario" placeholder="Digite seu comentário..." rows="4" required
+                                    style="margin-bottom: 0;"></textarea>
                                 <p style="font-weight: 600; margin: 0 0px 6px 0px;">Nome</p>
                                 <input type="text" name="nome" placeholder="Adicionar nome / apelido" required
                                     style="max-width: 240px;">
                                 <span id="erroComentario" class="erro-msg"></span>
-                                <input type="text" name="fakeEmail" class="honeypot" autocomplete="off">
-                                <input type="hidden" name="parentId" id="parentIdInput">
+                                <input type="text" name="fakeEmail" class="honeypot" autocomplete="off"
+                                    style="display: none;">
                                 <button type="submit" style="margin: 20px 0px;">Publicar comentário</button>
                             </form>
 
-                            <h3 style="padding-bottom: 10px; border-bottom: 1px solid #214556; margin: 0;">Comentários</h3>
+                            <h3 style="padding-bottom: 10px; border-bottom: 1px solid #214556; margin: 0;">Comentários
+                            </h3>
                             <div id="listaComentarios">Carregando...</div>
                         </section>
 
@@ -148,6 +149,7 @@
                             <h2>Episódios</h2>
                             <div id="episodios-lista"></div>
                         </section>
+                        
                     </main>
                     <div id="footer"></div>
                 </div>
@@ -165,7 +167,7 @@
     <script src="js/contSub.js"></script>
     <script src="js/search.js"></script>
     <script src="js/projectLoader.js"></script>
-    <script src="js/commentLogic.js"></script>
+    <script src="js/commentLogic.js" defer></script>
 </body>
 
 </html>
