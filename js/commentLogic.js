@@ -130,17 +130,21 @@ function mostrarLoading() {
 
 // === Parser CSV Robusto ===
 function parseCSV(text) {
-    const linhas = text.split("\n");
+    const linhas = text.trim().split("\n");
     const dados = [];
 
     for (let i = 1; i < linhas.length; i++) {
-        const linha = linhas[i].trim();
-        if (!linha) continue;
+        const linha = linhas[i];
 
-        const matches = linha.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
-        if (!matches || matches.length < 3) continue;
+        // separa em 3 colunas exatas, mesmo que o nome/comentário tenha vírgula
+        const partes = linha.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
 
-        const [timestamp, nome, comentario] = matches.map(c => c.replace(/^"|"$/g, "").replace(/""/g, '"'));
+        if (partes.length < 3) continue;
+
+        const timestamp = partes[0].replace(/^"|"$/g, '').trim();
+        const nome = partes[1].replace(/^"|"$/g, '').trim();
+        const comentario = partes[2].replace(/^"|"$/g, '').trim();
+
         if (!nome || !comentario) continue;
 
         dados.push({ nome, comentario, data: timestamp });
@@ -148,6 +152,7 @@ function parseCSV(text) {
 
     return dados;
 }
+
 
 // === Carregar Comentários ===
 function carregarComentarios() {
