@@ -134,26 +134,23 @@ function carregarComentarios() {
             const comentarios = [];
 
             for (const linha of linhas) {
-                if (!linha.trim()) continue; // ignora linha vazia
+                if (!linha.trim()) continue;
 
-                // Extrai colunas, tratando vírgulas dentro de aspas
+                // Extrai colunas respeitando vírgulas dentro de aspas
                 const colunas = linha.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g)?.map(c => c.replace(/^"|"$/g, ""));
 
-                // Garante que temos pelo menos nome e comentário
                 if (!colunas || colunas.length < 3) continue;
 
                 const timestamp = colunas[0];
                 const nome = colunas[1];
                 const comentario = colunas[2];
 
-                // ignora linhas vazias
                 if (!nome || !comentario) continue;
 
-                comentarios.push({ nome, comentario, timestamp });
+                comentarios.push({ nome, comentario, data: timestamp });
             }
 
-            // Exibe os comentários em ordem do mais recente para o mais antigo
-            comentarios.reverse();
+            comentarios.reverse(); // do mais recente para o mais antigo
 
             const container = document.getElementById("listaComentarios");
             container.innerHTML = "";
@@ -162,12 +159,13 @@ function carregarComentarios() {
                 const el = document.createElement("div");
                 el.className = "comentario";
                 el.innerHTML = `
-                    <div class="avatar">
-                        <img src="img/assets/profile.webp" alt="Avatar">
-                    </div>
-                    <div class="conteudo">
-                        <p><strong>${c.nome}</strong> <span class="data">${c.timestamp}</span></p>
-                        <p>${c.comentario}</p>
+                    <img class="profile" src="img/assets/profile.webp" alt="profile">
+                    <div style="width: 100%;">
+                        <div class="comentario-meta">
+                            <strong>${c.nome}</strong>
+                            <div style="font-size: 12px; color: #898989;">${c.data}</div>
+                        </div>
+                        <div class="com">${c.comentario}</div>
                     </div>
                 `;
                 container.appendChild(el);
