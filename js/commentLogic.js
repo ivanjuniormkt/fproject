@@ -163,7 +163,7 @@ function carregarComentarios() {
                 el.className = "comentario";
                 el.innerHTML = `
                     <div class="avatar">
-                        <img src="/img/avatar.webp" alt="Avatar">
+                        <img src="img/assets/profile.webp" alt="Avatar">
                     </div>
                     <div class="conteudo">
                         <p><strong>${c.nome}</strong> <span class="data">${c.timestamp}</span></p>
