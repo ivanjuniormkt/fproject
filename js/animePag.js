@@ -182,6 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${plataforma.icone}
                         <span>${plataforma.nome}</span>
                     `;
+                    a.onclick = () => registrarDownload(ep.numero);
                     botoes.appendChild(a);
                 }
             });
