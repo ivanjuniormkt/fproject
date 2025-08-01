@@ -379,7 +379,11 @@ button#search-button-nav {
     }
 
     .site-footer.f-mob {
-        display: none !important;
+        display: block !important;
+    }
+
+    div#footer {
+        display: none;
     }
 
     .search-bar-nav {
@@ -1340,6 +1344,8 @@ a#anime-site-oficial:hover {
     color: #ffff;
     text-decoration: none;
     font-weight: 500;
+    font-size: 16px;
+    margin: 0;
 }
 
 .post-meta {

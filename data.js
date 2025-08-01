@@ -55,7 +55,7 @@ const animes = [
         status: "Finalizado",
         sinopse: "Shi Miao continua a lidar com seu irmão mais velho, Shi Fen, cuja irresponsabilidade e comportamento imaturo frequentemente a deixam furiosa. Apesar das constantes brigas, Shi Fen demonstra ser um irmão protetor e carinhoso quando necessário. A série segue as desventuras cotidianas dos dois, destacando o amor fraternal e os momentos hilários que surgem de suas interações.",
         trailerUrl: "https://www.youtube.com/embed/GHhEI980jgM",
-        adicionadoEm: "10 de out de 2019",
+        adicionadoEm: "10 de outubro de 2019",
         estudio: "Fanworks, Imagineer",
         siteOficial: "#",
         video: "x265 10Bit",
@@ -98,7 +98,7 @@ const animes = [
         status: "Finalizado",
         sinopse: "Episódios presentes nos Blu-ray de Arifureta Shokugyou de Sekai Saikyou.",
         trailerUrl: "https://www.youtube.com/embed/xoIaPNWLxy0",
-        adicionadoEm: "3 de jan de 2020",
+        adicionadoEm: "3 de janeiro de 2020",
         estudio: "Asread, White Fox",
         siteOficial: "https://arifureta.com/",
         video: "x264 10Bit",
@@ -133,7 +133,7 @@ const animes = [
         status: "Finalizado",
         sinopse: "A História gira em torno de Kagami Yuuki, um garoto que se matricula na faculdade com o sonho de ser um aluno exemplar, pro engano ele entra no vestiário feminino, onde é proibido a entrada de homens. Diante da possibilidade de ser expulso, ele se veste de garota para não ser descoberto. Por fim, ele acaba se alojando em um quarto junto com Kakinozaka Ayana, professora que tem de vigia-lo.",
         trailerUrl: "https://www.youtube.com/embed/7jf5WqLGozo",
-        adicionadoEm: "22 de jan de 2020",
+        adicionadoEm: "22 de janeiro de 2020",
         estudio: "GoHands",
         siteOficial: "#",
         video: "x264 10Bit",
@@ -266,7 +266,7 @@ const animes = [
         status: "Finalizado",
         sinopse: "Mini anime de Ore dake Haireru Kakushi Dungeon lançado no canal oficial do YouTube.",
         trailerUrl: "https://www.youtube.com/embed/zvH00bgEz7g",
-        adicionadoEm: "28 de jul de 2021",
+        adicionadoEm: "28 de julho de 2021",
         estudio: "Okuruto Noboru",
         siteOficial: "https://kakushidungeon-anime.jp/special/ma.html",
         video: "x264 10Bit",
@@ -309,7 +309,7 @@ const animes = [
         status: "Finalizado",
         sinopse: "Parceria: Disboard. Todos os episódios apresentam versões chibi dos personagens. Há também uma quebra da quarta parede, com eles falando diretamente com você! Observações: Especiais presentes nos volumes 3 a 7 do DVD/BD de Hataraku Saibou.",
         trailerUrl: "https://www.youtube.com/embed/S0ntBPO6dB8",
-        adicionadoEm: "27 de ago de 2020",
+        adicionadoEm: "27 de agosto de 2020",
         estudio: "David Production",
         siteOficial: "https://hataraku-saibou.com/bddvd/vol01/",
         video: "x264 10Bit",
@@ -377,7 +377,7 @@ const animes = [
         status: "Finalizado",
         sinopse: "Um dia, a vida do empresário japonês de meia-idade Ryoma Takebayashi chegou a um fim repentino e decepcionante. Ryoma nunca teve uma vida abençoada, mas após sua morte, três grandes deuses o reencarnaram como uma criança em outro mundo com espadas e magia. Recebendo as mais cordiais e divinas boas-vindas dos deuses, Ryoma decide viver tranquilamente por conta própria na floresta. Trabalhando diligentemente com magia e caça, a maior paixão de Ryoma é pesquisar seus slimes domesticados.",
         trailerUrl: "https://www.youtube.com/embed/ZhqrSlogE0w",
-        adicionadoEm: "11 de mar de 2021",
+        adicionadoEm: "11 de março de 2021",
         estudio: "Maho Film",
         siteOficial: "https://kamihiro-anime.com/",
         video: "x264",
@@ -408,7 +408,7 @@ const animes = [
         status: "Finalizado",
         sinopse: "Oono Akira, um adulto trabalhador que pode ser encontrado em qualquer lugar, foi movido para um mundo diferente enquanto estava logado em um personagem conhecido como o “Rei Demônio” num jogo que ele gerencia. Lá, ele conhece uma garota com uma perna machucada e eles começam a viajar juntos, mas não há como os outros deixarem um Rei Demoníaco com forças tão esmagadoras sozinho. Apesar de serem alvos de países e santos que estão tentando subjugar o Lorde Demônio, eles causam bagunça onde quer que vão. Rei Demônio do lado de fora, pessoa normal por dentro, uma fantasia incompreensiva!",
         trailerUrl: "https://www.youtube.com/embed/dfm4V4eHPRk",
-        adicionadoEm: "25 de ago de 2019",
+        adicionadoEm: "25 de agosto de 2019",
         estudio: "EKACHI EPILKA",
         siteOficial: "https://maousama-anime.com/2019/",
         video: "x264 8Bit",
@@ -451,7 +451,7 @@ const animes = [
         status: "Finalizado",
         sinopse: "Oriko Seki, de 12 anos, perdeu os pais em um acidente de carro, e acabou morando na pensão de sua avó, a “Haru no Ya”. Com o fantasma “Uribou” vivendo com ela, acaba treinando para ser uma jovem atendente na pousada. No início, ela não gostou do treinamento, mas gradualmente sentiu admiração por seu título e começou a treinar seriamente. Assim, o crescimento da jovem guerreira Oriko começa.",
         trailerUrl: "https://www.youtube.com/embed/bdvEGm1Uue4",
-        adicionadoEm: "17 de ago de 2022",
+        adicionadoEm: "17 de agosto de 2022",
         estudio: "DLE, Madhouse.",
         siteOficial: "https://www.waka-okami.jp/",
         video: "x264 10Bit",
@@ -626,7 +626,7 @@ const animes = [
         status: "Finalizado",
         sinopse: "Uma manhã chuvosa em abril. Flores de cerejeira são atingidas pela chuva e flutuam numa poça. Alunos do ensino médio entram no portão da escola, carregando várias cores de guarda-chuvas. “Bom dia, Ren”, Yua cumprimenta Ren, com suas calças molhadas na frente do armário de sapatos. Quando Ren a encarou com tristeza, Homi, que estava encharcada, juntou-se a elas como se estivesse pulando. As meninas discutem o novo semestre. Elas passam sua vida escolar insubstituível enquanto as estações mudam.",
         trailerUrl: "https://www.youtube.com/embed/Q0__ol07alw",
-        adicionadoEm: "24 de jul de 2025",
+        adicionadoEm: "24 de julho de 2025",
         estudio: "Yokohama Animation Lab",
         siteOficial: "https://mirutights.jp/",
         video: "x265 10Bit",
@@ -893,7 +893,7 @@ const animes = [
         status: "Finalizado",
         sinopse: "Curtas lançados na web, apresentando o elenco como mini personagens.",
         trailerUrl: "https://www.youtube.com/embed/7yJIiLU9rmc",
-        adicionadoEm: "7 de set de 2022",
+        adicionadoEm: "7 de setembro de 2022",
         estudio: "DMM.futureworks, W-Toon Studio",
         siteOficial: "https://yuruyuri.com/miniyuri/",
         video: "x264 10Bit",
@@ -1009,7 +1009,7 @@ const animes = [
         status: "Finalizado",
         sinopse: "Especial do Dia dos Namorados para Kimetsu no Yaiba.",
         trailerUrl: "https://www.youtube.com/embed/yoxqLzEBYsI",
-        adicionadoEm: "20 de mar de 2021",
+        adicionadoEm: "20 de março de 2021",
         estudio: "ufotable",
         siteOficial: "https://kimetsu.com/anime/kimetsusaionline/valentine/",
         video: "x264",
@@ -1068,7 +1068,7 @@ const animes = [
         status: "Finalizado",
         sinopse: "Curtas especiais lançados para apresentar os personagens do mangá.",
         trailerUrl: "",
-        adicionadoEm: "5 de jun de 2020",
+        adicionadoEm: "5 de junho de 2020",
         estudio: "Xebec",
         siteOficial: "https://king-cr.jp/special/negima/release.html",
         video: "x264 10Bit",
@@ -1166,7 +1166,7 @@ const animes = [
         status: "Finalizado",
         sinopse: "A história se passa no reino mágico de Gynos, onde mulheres guerreiras duelam para determinar quem tem o direito de governar.",
         trailerUrl: "https://www.youtube.com/embed/reyxM26mC2A",
-        adicionadoEm: "4 de ago de 2022",
+        adicionadoEm: "4 de agosto de 2022",
         estudio: "FORTES",
         siteOficial: "https://queensblade.net/unlimited/",
         video: "x264 10Bit",
@@ -1277,6 +1277,288 @@ const animes = [
                     nyaa: "https://nyaa.si/view/1675473"
                 }
             }
+        ],
+    },
+
+    {
+        id: 24,
+        titulo: "Majutsushi Orphen Hagure Tabi",
+        imagem: "img/id24/id24capa.webp",
+        tags: ["Arte Marcial", "Aventura", "Ação", "Comédia", "Drama", "Fantasia", "Magia"],
+        lancamento: "2020",
+        genero: "Arte Marcial, Aventura, Ação, Comédia, Drama, Fantasia, Magia",
+        episodiosTotal: 13,
+        status: "Em andamento",
+        sinopse: "Um feiticeiro que já foi o melhor aluno da famosa Torre de Fang, agora passa o tempo perseguindo seus clientes desesperados como agiota, pelo menos até que um deles elabore um plano para ganhar dinheiro: um falso casamento. Sem querer ser envolvido no plano, Orphen encontra um monstro que tem sido seu objetivo desde o dia em que deixou a Torre de Fang. Entre aqueles que procuram matar o monstro e Orphen, fazendo de tudo para protege-lo, seus péssimos, mas pacíficos dias terminam. Tentar trazer sua irmã, Azalie, de volta à sua verdadeira forma, leva a muitos outros mistérios e à chave do segredo do mundo.",
+        trailerUrl: "https://www.youtube.com/embed/WG_Wi6ixBMg",
+        adicionadoEm: "31 de maio de 2025",
+        estudio: "Studio DEEN",
+        siteOficial: "https://ssorphen-anime.com/",
+        video: "x264 10Bit",
+        audio: "AAC",
+        resolucao: "1080p",
+        legendas: "HardSub",
+        scriptOriginal: "EMBER",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSe5iSUtjZ6yliKUjQfF3BaTbXEuwbHRMITWej2bHCgsadFP-Q/formResponse",
+        entry_nome: "entry.1362458731",
+        entry_comentario: "entry.1602729795",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTv20Qj42xwRRQbldYv_L02OHZVFCXAHwXTuPF8ERoF0PaFrRnO4rlK3ARLD5bXo-YTx-XVwv5yo9vV/pub?gid=1179576325&single=true&output=csv",
+        screenshots: [
+            "img/id24/shot1.webp",
+            "img/id24/shot2.webp",
+            "img/id24/shot3.webp",
+        ],
+        episodios: [
+            {
+                numero: 1,
+                downloads: {
+                    pixeldrain: "https://pixeldrain.com/u/B6PMAXxW"
+                }
+            },
+        ],
+    },
+    {
+        id: 25,
+        titulo: "Asatir 2 – Mirai no Mukashi Banashi",
+        imagem: "img/id25/id25capa.webp",
+        tags: ["Aventura"],
+        lancamento: "2024",
+        genero: "Aventura",
+        episodiosTotal: 13,
+        status: "Em andamento",
+        sinopse: "A história segue os descendentes dos heróis da primeira parte, que agora enfrentam uma nova ameaça. A paz conquistada está prestes a ser destruída por forças que buscam ressuscitar um poder ancestral. Futari, a jovem protagonista, deve descobrir os segredos de antigas lendas, chamadas Mukashi Banashi, e desvendar os mistérios que conectam as diversas gerações. Ela terá que tomar decisões difíceis que podem moldar o futuro da humanidade.",
+        trailerUrl: "https://www.youtube.com/embed/ndROyfA1ZzU",
+        adicionadoEm: "16 de novembro de 2024",
+        estudio: "TOEI Animation",
+        siteOficial: "https://mangaproductions.co.jp/en/works/asateer02-en/",
+        video: "x264 10Bit",
+        audio: "AAC",
+        resolucao: "1080p",
+        legendas: "HardSub",
+        scriptOriginal: "Erai-raws",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfdYtRmEQj4rN0sdtG3Pnf_46Vr5skOF0iLXVbZDuRrzYXT9A/formResponse",
+        entry_nome: "entry.103211402",
+        entry_comentario: "entry.1218569908",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRx2TZd-ldu6bpqZLF-SnNlp7nahvK1gH2T7hvqBmZA8havK63DqlFrz60eiRcATd6YwAxcB0bHbhL/pub?gid=908683020&single=true&output=csv",
+        screenshots: [
+            "img/id25/shot1.webp",
+            "img/id25/shot2.webp",
+            "img/id25/shot3.webp",
+        ],
+        episodios: [
+            {
+                numero: 1,
+                downloads: {
+                    pixeldrain: "https://pixeldrain.com/u/R2fQbcPy",
+                    pcloud: "https://u.pcloud.link/publink/show?code=XZAqFb5ZWq5bxRfMvzulUGBlVo6HT7demN87"
+                }
+            },
+            {
+                numero: 2,
+                downloads: {
+                    pixeldrain: "https://pixeldrain.com/u/5Pp1UYjW",
+                    pcloud: "https://u.pcloud.link/publink/show?code=XZaqFb5Z874vDOLTq7YQ210GfwhnBu8vOIpy"
+                }
+            },
+            {
+                numero: 3,
+                downloads: {
+                    pixeldrain: "https://pixeldrain.com/u/Ck26bd2e",
+                    pcloud: "https://u.pcloud.link/publink/show?code=XZ9dFb5ZUtBYjS7N2L5CbOorw8H09QRxCwgk"
+                }
+            },
+            {
+                numero: 4,
+                downloads: {
+                    pixeldrain: "https://pixeldrain.com/u/f8kKH3gR"
+                }
+            },
+        ],
+    },
+    {
+        id: 26,
+        titulo: "Blade Runner: Black Out 2022",
+        imagem: "img/id26/id26capa.webp",
+        tags: ["Sci-Fi", "Suspense", "Violência"],
+        lancamento: "2017",
+        genero: "Sci-Fi, Suspense, Violência",
+        episodiosTotal: 1,
+        status: "Finalizado",
+        sinopse: "Em 2022, uma detonação EMP causa um apagão global que tem implicações massivas e destrutivas em todo o mundo.",
+        trailerUrl: "https://www.youtube.com/embed/924olvhb2pU",
+        adicionadoEm: "5 de julho de 2020",
+        estudio: "Cygames Pictures",
+        siteOficial: "#",
+        video: "x264 10Bit",
+        audio: "AAC",
+        resolucao: "1080p",
+        legendas: "HardSub",
+        scriptOriginal: "HorribleSubs",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdOZN1ivf6WZsPevJTZinz-_FwAgkX3LIrLltgfKljf6ORJTg/formResponse",
+        entry_nome: "entry.1543184838",
+        entry_comentario: "entry.1453719226",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vReddrIY4v-udJW96f0ymSzQgTeMRs2lA2QbMkVoBQ-Yw_MadO7lOqF2fF1X65xLEjPnd5TRsCCoIXd/pub?gid=453183716&single=true&output=csv",
+        screenshots: [
+            "img/id26/shot1.webp",
+            "img/id26/shot2.webp",
+            "img/id26/shot3.webp",
+        ],
+        episodios: [
+            {
+                numero: 1,
+                downloads: {
+                    pixeldrain: "https://pixeldrain.com/u/KmkxHbHJ"
+                }
+            }
+        ],
+    },
+    {
+        id: 27,
+        titulo: "Gaikotsu Shotenin Honda-san – OVA",
+        imagem: "img/id27/id27capa.webp",
+        tags: ["Comédia", "Slice of Life"],
+        lancamento: "2019",
+        genero: "Comédia, Slice of Life",
+        episodiosTotal: 1,
+        status: "Finalizado",
+        sinopse: "O episódio adicional presente nos DVD no relançamento dos três primeiros volumes do mangá.",
+        trailerUrl: "https://www.youtube.com/embed/MLSGck3SKv8",
+        adicionadoEm: "7 de abril de 2025",
+        estudio: "DLE",
+        siteOficial: "https://x.com/gai_honda/",
+        video: "x264 10Bit",
+        audio: "AAC",
+        resolucao: "720p",
+        legendas: "HardSub",
+        scriptOriginal: "Indisponivel",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScbhqkl-uxrM1O6lSG4VNYzSAlD7TJUq4qiSx_8px-YvSKNAQ/formResponse",
+        entry_nome: "entry.1650807791",
+        entry_comentario: "entry.1171623612",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQqeKUJWx9TlxJKxt8N8jI5Ap-T_scNxsVn2LWFIJ3Szs4tphzbths5ePZojNYAk9fdP3qkQu0dRwxc/pub?gid=18897984&single=true&output=csv",
+        screenshots: [
+            "img/id27/shot1.webp",
+            "img/id27/shot2.webp",
+            "img/id27/shot3.webp",
+        ],
+        episodios: [
+            {
+                numero: 1,
+                downloads: {
+                    pixeldrain: "https://pixeldrain.com/u/LoLf1S3x"
+                }
+            }
+        ],
+    },
+    {
+        id: 28,
+        titulo: "Kyochuu Rettou",
+        imagem: "img/id28/id28capa.webp",
+        tags: ["Ação", "Ecchi", "Terror"],
+        lancamento: "2019",
+        genero: "Ação, Ecchi, Terror",
+        episodiosTotal: 1,
+        status: "Finalizado",
+        sinopse: "Um grupo de estudantes sobrevive a um acidente e fica preso numa ilha infestada por insetos mutantes gigantes. Liderados por Mutsumi, uma entomóloga amadora, eles lutam para sobreviver contra criaturas mortais e conflitos internos, enquanto descobrem que o resgate pode não chegar a tempo. O horror e a violência extrema testam sua sanidade e solidariedade.",
+        trailerUrl: "https://www.youtube.com/embed/3PqHO98z5QE",
+        adicionadoEm: "30 de abril de 2025",
+        estudio: "Passione",
+        siteOficial: "https://kyochu-retto.net/",
+        video: "AVC/H.264",
+        audio: "AAC",
+        resolucao: "720p",
+        legendas: "HardSub",
+        scriptOriginal: "Glenn",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfuYXSZvESBS1PHNCF_w11EAWOrq0IW16oLpumvFNWvBVGdWw/formResponse",
+        entry_nome: "entry.248643611",
+        entry_comentario: "entry.1444128337",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTPwsV6naK8CfMcq5zkrhsUoX-R287C0uAbFkaK1bKs1t_tbQ8We_7YoBSTrYfQ9SulVFjjPWdo1i2E/pub?gid=381471499&single=true&output=csv",
+        screenshots: [
+            "img/id28/shot1.webp",
+            "img/id28/shot2.webp",
+            "img/id28/shot3.webp",
+        ],
+        episodios: [
+            {
+                numero: 1,
+                downloads: {
+                    krakenfiles: "https://krakenfiles.com/view/IbcX5I93ab/file.html"
+                }
+            }
+        ],
+    },
+    {
+        id: 29,
+        titulo: "Kono Yo no Hate de Koi wo Utau Shoujo YU-NO Special",
+        imagem: "img/id29/id29capa.webp",
+        tags: ["Drama", "Sci-Fi"],
+        lancamento: "2019",
+        genero: "Drama, Sci-Fi",
+        episodiosTotal: 1,
+        status: "Finalizado",
+        sinopse: "Takuya e Yu-No estão dentro da Árvore de Vrinda, e podem ver os muitos mundos paralelos que poderiam ter estado. Entre eles está a imagem de Mitsuki, que não pode escapar de seu trágico destino. Para libertar Mitsuki desse destino, Takuya procura um certo evento.",
+        trailerUrl: "https://www.youtube.com/embed/sPGew8ubBcc",
+        adicionadoEm: "3 de janeiro de 2022",
+        estudio: "Feel",
+        siteOficial: "https://yuno-anime.com/",
+        video: "x264 10Bit",
+        audio: "FLAC",
+        resolucao: "1080p",
+        legendas: "Softsub",
+        scriptOriginal: "Indisponivel",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeM1uNlKe2hMYsXv_2Gz7vzOz20fF5GRUZ05u_wrpZ3qYsTeg/formResponse",
+        entry_nome: "entry.1229175592",
+        entry_comentario: "entry.499531168",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRl2wYubeXrzlyD-vbTAF1dB2esblnirZACbJ93JOtB1pdL_COesPzhFPbnlgOtKClNlnSKuaykNnt7/pub?gid=1049879970&single=true&output=csv",
+        screenshots: [
+            "img/id29/shot1.webp",
+            "img/id29/shot2.webp",
+            "img/id29/shot3.webp",
+        ],
+        episodios: [
+            {
+                numero: 1,
+                downloads: {
+                    terabox: "https://terabox.com/s/1pXnqhDxhWzhQBNm_mlqLPA",
+                    nyaa: "https://nyaa.si/view/1675476"
+                }
+            }
+        ],
+    },
+    {
+        id: 30,
+        titulo: "Boku no Kokoro no Yabai Yatsu",
+        imagem: "img/id30/id30capa.webp",
+        tags: ["Comédia"],
+        lancamento: "2023",
+        genero: "Comédia",
+        episodiosTotal: 12,
+        status: "Em andamento",
+        sinopse: "Ichikawa Kyoutarou, um garoto que mal se agarra à parte inferior da escada social de sua escola, secretamente acredita que é o protagonista atormentado de algum thriller psicológico. Ele passa seus dias imaginando maneiras de perturbar a vida pacífica de seus colegas de classe e suspirando por Yamada Anna, a ídolo da turma. Mas Kyoutarou não é nem de longe o adolescente problemático que finge ser… e descobre-se que Anna também é um pouco estranha!",
+        trailerUrl: "https://www.youtube.com/embed/1x6BnBAOwaY",
+        adicionadoEm: "22 de maio de 2023",
+        estudio: "Shin-Ei Animation",
+        siteOficial: "https://bokuyaba-anime.com/",
+        video: "x265 10Bit",
+        audio: "AAC",
+        resolucao: "1080p",
+        legendas: "HardSub",
+        scriptOriginal: "Erai-raws",
+        form_url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSer-vVS7Wfyjo1nMNLg1-JwkoI5mXHbv7NjxaQthtQ_hPnMfw/formResponse",
+        entry_nome: "entry.519814198",
+        entry_comentario: "entry.989215669",
+        csv_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQU_gYTySpsFWNmQ-rER7qQY1opMyuW0CxtdwyScQSqyPuKeyglcHH50HmsZRZhlMfWu6U4Nmp-yqq2/pub?gid=1623005309&single=true&output=csv",
+        screenshots: [
+            "img/id30/shot1.webp",
+            "img/id30/shot2.webp",
+            "img/id30/shot3.webp",
+        ],
+        episodios: [
+            {
+                numero: 1,
+                downloads: {
+                    nyaa: "https://nyaa.si/view/1674371",
+                }
+            },
         ],
     },
 ];

@@ -2,16 +2,26 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Absolute Fansub - Animes legendados</title>
-    <link rel="icon" href="img/assets/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="img/assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <script src="/js/loadHeader.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título que será substituído via JS -->
+  <title id="dynamic-title">Absolute Fansub - Animes legendados</title>
+  <!-- Ícones -->
+  <link rel="icon" href="img/assets/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/assets/favicon.ico" type="image/x-icon">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- Meta SEO dinâmica -->
+  <meta name="description" id="dynamic-description" content="Descrição dinâmica do post">
+  <!-- Open Graph (para compartilhamento) -->
+  <meta property="og:title" id="og-title" content="">
+  <meta property="og:description" id="og-description" content="">
+  <meta property="og:image" id="og-image" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:url" id="og-url" content="">
+  <script type="application/ld+json" id="structured-data"></script>
 </head>
 
 <body>
@@ -24,8 +34,7 @@
             <div class="container-infs">
                 <div class="container-footer-main">
                     <main class="post-detail-container">
-                        <h1 id="post-page-title" style="display: none;"></h1>
-                        <h1 id="post-detail-title" style="margin: 0; text-align: left;"></h1>
+                        <h1 id="post-page-title" style="margin: 0; text-align: left;"></h1>
                         <div class="inf-pmet">
                             <p class="post-meta" style="gap: 3px; align-items: center; margin-top: 0 !important;">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
@@ -46,7 +55,7 @@
                                 <span id="post-detail-date"></span>
                             </p>
                         </div>
-                        <img id="post-detail-image" src="" alt="Imagem do Post" class="post-main-image">
+                        <img id="post-detail-image" src="" alt="capa" class="post-main-image" loading="lazy">
 
                         <div id="post-detail-content">
                         </div>

@@ -1,75 +1,58 @@
 // postDate1.js
 const posts = [
     {
-        id: 1,
-        title: "Assista online todos os episodios de Nanatsu no Taizai",
-        link: "contentpost.html?id=1", // <-- Garanta que o link aponte para a página de detalhes com o ID
-        thumbnail: "img/55d43303b0b288ca70bbd0e73b042c2f.avif",
-        summary: "Sub-informações do post ficaram sendo exibidas aqui...",
-        author: "Absolute",
-        date: "2025-07-18",
-        animeId: 1,
-        fullContent: `<table class="has-fixed-layout"><tbody><tr><td><strong>Qualidade</strong></td><td class="has-text-align-center" data-align="center"><strong>780p</strong>&nbsp;<strong>(HD)</strong></td></tr><tr><td><strong>Áudio</strong></td><td class="has-text-align-center" data-align="center"><strong>AAC</strong></td></tr><tr><td><em><strong>Página do Projeto</strong></em></td><td class="has-text-align-center" data-align="center"><a href="https://absolutesub.fansub.com.br/miru-tights/">Miru Tights</a></td></tr><tr><td><strong><em>Aviso</em></strong></td><td class="has-text-align-center" data-align="center">Por motivo de falta der pessoal estou com problemas para deixar os episodios em dias.</td></tr><tr><td><em><strong>Download</strong></em></td><td class="has-text-align-center" data-align="center"> Disponivel na pagina do projeto!</td></tr></tbody></table>`
+        id: 9995,
+        title: "Miru Tights [BD]",
+        link: "contentpost.html?id=9995",
+        thumbnail: "img/PostsIMG/absolute-img-postId-9995.webp",
+        summary: "Episódios disponíveis na página do projeto.",
+        author: "AbsoluteSUB",
+        date: "07-24-2025",
+        animeId: 13,
+        fullContent: `<p>Episódios disponíveis na página do projeto.</p><p>Aviso: Por motivo de falta der pessoal estou com problemas para deixar os episodios em dias.</p>`
     },
     {
-        id: 2,
-        title: "Post Titulo",
-        link: "contentpost.html?id=2", // <-- Link para o post 2
-        thumbnail: "img/55d43303b0b288ca70bbd0e73b042c2f.avif",
-        summary: "Sub-informações do post ficaram sendo exibidas aqui...",
-        author: "Absolute",
-        date: "2025-07-08",
-        animeId: 2,
-        fullContent: `<p>Conteúdo completo do post 2...</p>`
+        id: 9996,
+        title: "Blade Runner: Black Out 2022",
+        link: "contentpost.html?id=9996",
+        thumbnail: "img/PostsIMG/absolute-img-postId-9996.webp",
+        summary: "Episódios disponíveis na página do projeto.",
+        author: "AbsoluteSUB",
+        date: "07-18-2025",
+        animeId: 26,
+        fullContent: `<p>Episódios disponíveis na página do projeto.</p><p>Aviso: Por motivo de falta der pessoal estou com problemas para deixar os episodios em dias.</p>`
     },
     {
-        id: 3,
-        title: "Post Titulo",
-        link: "contentpost.html?id=2", // <-- Link para o post 2
-        thumbnail: "img/55d43303b0b288ca70bbd0e73b042c2f.avif",
-        summary: "Sub-informações do post ficaram sendo exibidas aqui...",
-        author: "Absolute",
-        date: "2025-07-08",
-        fullContent: `<p>Conteúdo completo do post 2...</p>`
+        id: 9997,
+        title: "Asatir 2 – Mirai no Mukashi Banashi – EP 04",
+        link: "contentpost.html?id=9997",
+        thumbnail: "img/PostsIMG/absolute-img-postId-9997.webp",
+        summary: "Episódios disponíveis na página do projeto.",
+        author: "AbsoluteSUB",
+        date: "07-15-2025",
+        animeId: 25,
+        fullContent: `<p>Episódios disponíveis na página do projeto.</p><p>Aviso: Por motivo de falta der pessoal estou com problemas para deixar os episodios em dias.</p>`
     },
     {
-        id: 4,
-        title: "Post Titulo",
-        link: "contentpost.html?id=2", // <-- Link para o post 2
-        thumbnail: "img/55d43303b0b288ca70bbd0e73b042c2f.avif",
-        summary: "Sub-informações do post ficaram sendo exibidas aqui...",
-        author: "Absolute",
-        date: "2025-07-08",
-        fullContent: `<p>Conteúdo completo do post 2...</p>`
+        id: 9998,
+        title: "Majutsushi Orphen Hagure Tabi – 01 [BD]",
+        link: "contentpost.html?id=9998",
+        thumbnail: "img/PostsIMG/absolute-img-postId-9998.webp",
+        summary: "Episódios disponíveis na página do projeto.",
+        author: "AbsoluteSUB",
+        date: "05-31-2025",
+        animeId: 24,
+        fullContent: `<p>Episódios disponíveis na página do projeto.</p>`
     },
     {
-        id: 5,
-        title: "Post Titulo",
-        link: "contentpost.html?id=2", // <-- Link para o post 2
-        thumbnail: "img/55d43303b0b288ca70bbd0e73b042c2f.avif",
-        summary: "Sub-informações do post ficaram sendo exibidas aqui...",
-        author: "Absolute",
-        date: "2025-07-08",
-        fullContent: `<p>Conteúdo completo do post 2...</p>`
+        id: 9999,
+        title: "Otona no Bouguya-san – 01 ao 03",
+        link: "contentpost.html?id=9999",
+        thumbnail: "img/PostsIMG/absolute-img-postId-9999.webp",
+        summary: "Episódios disponíveis na página do projeto.",
+        author: "AbsoluteSUB",
+        date: "05-30-2025",
+        animeId: 20,
+        fullContent: `<p>Episódios disponíveis na página do projeto.</p>`
     },
-    {
-        id: 6,
-        title: "Post Titulo",
-        link: "contentpost.html?id=2", // <-- Link para o post 2
-        thumbnail: "img/55d43303b0b288ca70bbd0e73b042c2f.avif",
-        summary: "Sub-informações do post ficaram sendo exibidas aqui...",
-        author: "Absolute",
-        date: "2025-07-08",
-        fullContent: `<p>Conteúdo completo do post 2...</p>`
-    },
-    {
-        id: 7,
-        title: "Post Titulo",
-        link: "contentpost.html?id=2", // <-- Link para o post 2
-        thumbnail: "img/55d43303b0b288ca70bbd0e73b042c2f.avif",
-        summary: "Sub-informações do post ficaram sendo exibidas aqui...",
-        author: "Absolute",
-        date: "2025-07-08",
-        fullContent: `<p>Conteúdo completo do post 2...</p>`
-    }
 ];

@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <!-- Barra de progresso estilizada -->
                 <div class="progress-bar-container" style="margin-top: 16px; background-color: #08202c;">
-                    <div class="progress-bar" style="width: ${progressoPorcentagem.toFixed(2)}%; background-color: #4b768b;">
-                        ${episodiosAtuais}/${anime.episodiosTotal} Episódios
+                    <div class="progress-bar" style="width: ${progressoPorcentagem.toFixed(2)}%; background-color: #4b768b; white-space: nowrap; overflow: hidden;">
+                        ${episodiosAtuais}/${anime.episodiosTotal} Eps
                     </div>
                 </div>
 
